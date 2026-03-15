@@ -1,67 +1,136 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>S&L Verpackungen</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
-.products {
-    text-align: center;
-    margin-top: 60px;
-}
-
-.products img {
-    width: 100%;
-    max-width: 1100px;
-    border-radius: 12px;
-}
-
 body{
-font-family: 'Inter', sans-serif;
+font-family:'Inter',sans-serif;
 margin:0;
-background:#f4f4f4;
+background:#f6f6f6;
 color:#333;
 }
 
+/* HEADER */
+
 header{
-background:#111;
-color:white;
-padding:20px;
+background:white;
 text-align:center;
-font-size:22px;
+padding:40px 20px 20px 20px;
 }
 
+header img{
+max-width:520px;
+width:100%;
+height:auto;
+margin-bottom:10px;
+}
+
+/* HERO */
+
 .hero{
-background:white;
-padding:100px 20px;
+padding:10px 20px 40px 20px;
 text-align:center;
 }
 
 .hero h1{
 font-size:40px;
-margin-bottom:20px;
+margin:10px 0 10px 0;
+}
+
+.hero h2{
+font-weight:500;
+color:#666;
+margin:0;
 }
 
 .hero p{
-font-size:20px;
-color:#555;
+font-size:18px;
+color:#666;
+max-width:700px;
+margin:20px auto 0 auto;
+line-height:1.6;
 }
+
+/* PRODUKTÜBERSICHT BILD */
+
+.products{
+text-align:center;
+margin:60px 0;
+}
+
+.products img{
+width:100%;
+max-width:1100px;
+border-radius:12px;
+}
+
+/* PRODUKTKARTEN */
+
+.product-section{
+display:flex;
+justify-content:center;
+gap:40px;
+margin:60px auto;
+flex-wrap:wrap;
+max-width:1200px;
+padding:0 20px;
+}
+
+.product-card{
+background:white;
+width:320px;
+border-radius:14px;
+padding:30px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+transition:all 0.25s ease;
+}
+
+.product-card:hover{
+transform:translateY(-6px);
+box-shadow:0 18px 45px rgba(0,0,0,0.12);
+}
+
+.product-card img{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+}
+
+.product-card h3{
+margin-top:20px;
+font-size:22px;
+}
+
+.product-card p{
+color:#666;
+font-size:15px;
+line-height:1.5;
+}
+
+/* INFO SECTION */
 
 .section{
 max-width:1000px;
 margin:auto;
-padding:60px 20px;
+padding:40px 20px;
 }
 
 .card{
 background:white;
 padding:30px;
 margin-bottom:20px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
 }
 
 footer{
@@ -69,47 +138,7 @@ background:#111;
 color:white;
 text-align:center;
 padding:30px;
-margin-top:40px;
-}
-
-.product-section {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 80px;
-    flex-wrap: wrap;
-}
-
-.product-card {
-    background: white;
-    width: 320px;
-    border-radius: 12px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0px 10px 30px rgba(0,0,0,0.08);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0px 18px 40px rgba(0,0,0,0.12);
-}
-
-.product-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.product-card h3 {
-    margin-top: 20px;
-    font-size: 22px;
-}
-
-.product-card p {
-    color: #666;
-    font-size: 15px;
+margin-top:60px;
 }
 
 </style>
@@ -118,48 +147,52 @@ margin-top:40px;
 
 <body>
 
-<header style="background:white;padding:60px 20px;text-align:center;">
+<header>
 
-<img src="images/WhatsApp Image 2026-03-10 at 13.34.05.jpeg"
-style="max-width:500px;width:100%;height:auto;margin-bottom:20px;">
+<img src="images/WhatsApp Image 2026-03-10 at 13.34.05.jpeg">
 
-<section class="product-section">
+<div class="hero">
 
-    <div class="product-card">
-        <img src="images/kartonagen.png" alt="Kartonagen">
-        <h3>Kartonagen</h3>
-        <p>Stabile Versandkartons und individuelle Verpackungslösungen für Industrie, Handel und E-Commerce.</p>
-    </div>
+<h1>S&L Verpackungen</h1>
 
-    <div class="product-card">
-        <img src="images/folie.png" alt="Verpackungsfolie">
-        <h3>Verpackungsfolie</h3>
-        <p>Stretchfolie, Luftpolsterfolie und Schutzverpackungen für sicheren Transport und Lagerung.</p>
-    </div>
+<h2>Moderne Verpackungslösungen</h2>
 
-    <div class="product-card">
-        <img src="images/klebebaender.png" alt="Klebebänder">
-        <h3>Klebebänder</h3>
-        <p>Hochwertige Klebebänder und Verpackungslösungen für effiziente und sichere Versandprozesse.</p>
-    </div>
-
-</section>
-
-<h1 style="font-size:40px;margin:10px 0;">S&L Verpackungen</h1>
-
-<h2 style="font-weight:500;color:#555;margin-top:0;">
-Moderne Verpackungslösungen
-</h2>
-
-<p style="font-size:18px;color:#666;max-width:700px;margin:auto;">
+<p>
 Individuelle, nachhaltige und funktionale Verpackungen für Unternehmen.
 </p>
 
+</div>
+
 </header>
 
+
 <div class="products">
-    <img src="images/produktpalette.png">
+<img src="images/produktpalette.png">
 </div>
+
+
+<section class="product-section">
+
+<div class="product-card">
+<img src="images/kartonagen.png">
+<h3>Kartonagen</h3>
+<p>Stabile Versandkartons und individuelle Verpackungslösungen für Industrie, Handel und E-Commerce.</p>
+</div>
+
+<div class="product-card">
+<img src="images/folie.png">
+<h3>Verpackungsfolie</h3>
+<p>Stretchfolie, Luftpolsterfolie und Schutzverpackungen für sicheren Transport und Lagerung.</p>
+</div>
+
+<div class="product-card">
+<img src="images/klebebaender.png">
+<h3>Klebebänder</h3>
+<p>Hochwertige Klebebänder und Verpackungslösungen für effiziente Versandprozesse.</p>
+</div>
+
+</section>
+
 
 <div class="section">
 
@@ -181,7 +214,7 @@ Individuelle, nachhaltige und funktionale Verpackungen für Unternehmen.
 </div>
 
 <footer>
-© 2026 SL Verpackungen
+© 2026 S&L Verpackungen
 </footer>
 
 </body>
