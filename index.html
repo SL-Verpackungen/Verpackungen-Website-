@@ -1,221 +1,662 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S&L Verpackungen</title>
+  <meta name="description" content="Moderne Verpackungslösungen für Unternehmen – Kartonagen, Verpackungsfolie und Klebebänder.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    *{
+      box-sizing:border-box;
+    }
 
-<title>S&L Verpackungen</title>
+    html{
+      scroll-behavior:smooth;
+    }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    body{
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:#f6f6f6;
+      color:#1f1f1f;
+    }
 
-<style>
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
 
-body{
-font-family:'Inter',sans-serif;
-margin:0;
-background:#f6f6f6;
-color:#333;
-}
+    img{
+      max-width:100%;
+      display:block;
+    }
 
-/* HEADER */
+    .container{
+      width:min(1180px, calc(100% - 40px));
+      margin:0 auto;
+    }
 
-header{
-background:white;
-text-align:center;
-padding:40px 20px 20px 20px;
-}
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,0.94);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid #ececec;
+    }
 
-header img{
-max-width:520px;
-width:100%;
-height:auto;
-margin-bottom:10px;
-}
+    .nav-inner{
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
 
-/* HERO */
+    .brand{
+      font-weight:800;
+      font-size:1rem;
+      letter-spacing:0.01em;
+    }
 
-.hero{
-padding:10px 20px 40px 20px;
-text-align:center;
-}
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      flex-wrap:wrap;
+    }
 
-.hero h1{
-font-size:40px;
-margin:10px 0 10px 0;
-}
+    .nav-links a{
+      color:#333;
+      font-weight:500;
+      font-size:0.95rem;
+    }
 
-.hero h2{
-font-weight:500;
-color:#666;
-margin:0;
-}
+    .nav-links a:hover{
+      color:#000;
+    }
 
-.hero p{
-font-size:18px;
-color:#666;
-max-width:700px;
-margin:20px auto 0 auto;
-line-height:1.6;
-}
+    .nav-cta{
+      background:#111;
+      color:#fff;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:600;
+    }
 
-/* PRODUKTÜBERSICHT BILD */
+    .nav-cta:hover{
+      background:#2b2b2b;
+    }
 
-.products{
-text-align:center;
-margin:60px 0;
-}
+    .hero-wrap{
+      background:#fff;
+      padding:42px 0 54px;
+      border-bottom:1px solid #ececec;
+    }
 
-.products img{
-width:100%;
-max-width:1100px;
-border-radius:12px;
-}
+    .hero{
+      text-align:center;
+    }
 
-/* PRODUKTKARTEN */
+    .hero-logo{
+      max-width:560px;
+      width:100%;
+      height:auto;
+      margin:0 auto 10px;
+    }
 
-.product-section{
-display:flex;
-justify-content:center;
-gap:40px;
-margin:60px auto;
-flex-wrap:wrap;
-max-width:1200px;
-padding:0 20px;
-}
+    .hero h1{
+      margin:8px 0 8px;
+      font-size:clamp(2.1rem, 5vw, 4rem);
+      line-height:1.02;
+      letter-spacing:-0.03em;
+    }
 
-.product-card{
-background:white;
-width:320px;
-border-radius:14px;
-padding:30px;
-text-align:center;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-transition:all 0.25s ease;
-}
+    .hero h2{
+      margin:0;
+      font-size:clamp(1.1rem, 2vw, 1.45rem);
+      font-weight:500;
+      color:#666;
+    }
 
-.product-card:hover{
-transform:translateY(-6px);
-box-shadow:0 18px 45px rgba(0,0,0,0.12);
-}
+    .hero p{
+      max-width:760px;
+      margin:22px auto 0;
+      font-size:1.08rem;
+      line-height:1.75;
+      color:#666;
+    }
 
-.product-card img{
-width:100%;
-height:180px;
-object-fit:cover;
-border-radius:10px;
-}
+    .hero-actions{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:30px;
+    }
 
-.product-card h3{
-margin-top:20px;
-font-size:22px;
-}
+    .btn{
+      padding:15px 24px;
+      border-radius:999px;
+      font-weight:700;
+      transition:0.2s ease;
+      display:inline-block;
+    }
 
-.product-card p{
-color:#666;
-font-size:15px;
-line-height:1.5;
-}
+    .btn-dark{
+      background:#111;
+      color:#fff;
+    }
 
-/* INFO SECTION */
+    .btn-dark:hover{
+      transform:translateY(-1px);
+      background:#2b2b2b;
+    }
 
-.section{
-max-width:1000px;
-margin:auto;
-padding:40px 20px;
-}
+    .btn-light{
+      background:#efefef;
+      color:#111;
+    }
 
-.card{
-background:white;
-padding:30px;
-margin-bottom:20px;
-border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-}
+    .btn-light:hover{
+      transform:translateY(-1px);
+      background:#e6e6e6;
+    }
 
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:60px;
-}
+    .section{
+      padding:84px 0;
+    }
 
-</style>
+    .section-title{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 42px;
+    }
 
+    .eyebrow{
+      margin:0 0 12px;
+      text-transform:uppercase;
+      letter-spacing:0.08em;
+      font-size:0.82rem;
+      font-weight:700;
+      color:#7a7a7a;
+    }
+
+    .section-title h2{
+      margin:0 0 14px;
+      font-size:clamp(1.9rem, 4vw, 3rem);
+      line-height:1.08;
+      letter-spacing:-0.03em;
+    }
+
+    .section-title p{
+      margin:0;
+      color:#666;
+      line-height:1.75;
+    }
+
+    .product-section{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .product-card{
+      background:#fff;
+      border-radius:22px;
+      padding:26px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.06);
+      transition:transform 0.22s ease, box-shadow 0.22s ease;
+      text-align:center;
+    }
+
+    .product-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 18px 42px rgba(0,0,0,0.1);
+    }
+
+    .product-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:16px;
+    }
+
+    .product-card h3{
+      margin:20px 0 10px;
+      font-size:1.35rem;
+    }
+
+    .product-card p{
+      margin:0;
+      color:#666;
+      font-size:0.98rem;
+      line-height:1.7;
+    }
+
+    .benefits-grid{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:24px;
+    }
+
+    .benefit-card{
+      background:#fff;
+      border-radius:20px;
+      padding:28px;
+      box-shadow:0 8px 24px rgba(0,0,0,0.05);
+    }
+
+    .benefit-card h3{
+      margin:0 0 10px;
+      font-size:1.15rem;
+    }
+
+    .benefit-card p{
+      margin:0;
+      color:#666;
+      line-height:1.7;
+    }
+
+    .b2b-box{
+      background:#fff;
+      border-radius:28px;
+      padding:42px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.06);
+      display:grid;
+      grid-template-columns:1.15fr 0.85fr;
+      gap:34px;
+      align-items:start;
+    }
+
+    .b2b-box h3{
+      margin:0 0 14px;
+      font-size:1.8rem;
+      letter-spacing:-0.02em;
+    }
+
+    .b2b-box p{
+      margin:0 0 14px;
+      color:#666;
+      line-height:1.75;
+    }
+
+    .bullet-list{
+      display:grid;
+      gap:12px;
+      margin-top:16px;
+    }
+
+    .bullet-item{
+      background:#f6f6f6;
+      border-radius:14px;
+      padding:14px 16px;
+      color:#444;
+      font-weight:500;
+    }
+
+    .contact-section{
+      background:#fff;
+      border-top:1px solid #ececec;
+      border-bottom:1px solid #ececec;
+    }
+
+    .contact-wrap{
+      padding:84px 0;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      align-items:start;
+    }
+
+    .contact-card{
+      background:#f8f8f8;
+      border-radius:22px;
+      padding:28px;
+    }
+
+    .contact-card h3{
+      margin:0 0 10px;
+      font-size:1.4rem;
+    }
+
+    .contact-card p{
+      margin:0 0 18px;
+      color:#666;
+      line-height:1.7;
+    }
+
+    .contact-form{
+      display:grid;
+      gap:14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+      width:100%;
+      border:1px solid #ddd;
+      border-radius:14px;
+      padding:15px 16px;
+      font:inherit;
+      background:#fff;
+    }
+
+    .contact-form textarea{
+      min-height:140px;
+      resize:vertical;
+    }
+
+    .contact-button{
+      display:inline-block;
+      background:#111;
+      color:#fff;
+      padding:15px 20px;
+      border-radius:14px;
+      font-weight:700;
+      text-align:center;
+    }
+
+    .contact-info{
+      display:grid;
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .info-box{
+      background:#fff;
+      border-radius:16px;
+      padding:16px 18px;
+      border:1px solid #e8e8e8;
+    }
+
+    .info-label{
+      display:block;
+      font-size:0.82rem;
+      text-transform:uppercase;
+      letter-spacing:0.06em;
+      color:#8a8a8a;
+      margin-bottom:6px;
+      font-weight:700;
+    }
+
+    footer{
+      background:#111;
+      color:#fff;
+      margin-top:0;
+    }
+
+    .footer-inner{
+      min-height:92px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+      padding:20px 0;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a{
+      color:#d8d8d8;
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+    }
+
+    @media (max-width: 980px){
+      .product-section,
+      .benefits-grid,
+      .contact-wrap,
+      .b2b-box{
+        grid-template-columns:1fr;
+      }
+
+      .nav-inner{
+        padding:12px 0;
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .nav-links{
+        gap:16px;
+      }
+    }
+
+    @media (max-width: 640px){
+      .hero-wrap{
+        padding:30px 0 42px;
+      }
+
+      .section,
+      .contact-wrap{
+        padding-top:64px;
+        padding-bottom:64px;
+      }
+
+      .b2b-box{
+        padding:28px;
+      }
+
+      .product-card,
+      .benefit-card,
+      .contact-card{
+        padding:22px;
+      }
+
+      .product-card img{
+        height:190px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">S&amp;L Verpackungen</div>
+      <div class="nav-links">
+        <a href="#produkte">Produkte</a>
+        <a href="#loesungen">Lösungen</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#kontakt" class="nav-cta">Anfrage stellen</a>
+      </div>
+    </div>
+  </nav>
 
-<img src="images/WhatsApp Image 2026-03-10 at 13.34.05.jpeg">
+  <div class="hero-wrap">
+    <div class="container hero">
+      <img class="hero-logo" src="images/WhatsApp Image 2026-03-10 at 13.34.05.jpeg" alt="S&L Verpackungen Logo">
 
-<div class="hero">
+      <h1>S&amp;L Verpackungen</h1>
+      <h2>Moderne Verpackungslösungen</h2>
+      <p>
+        Individuelle, funktionale und nachhaltige Verpackungslösungen für Unternehmen,
+        Industrie, Handel und E-Commerce.
+      </p>
 
-<h1>S&L Verpackungen</h1>
+      <div class="hero-actions">
+        <a href="#produkte" class="btn btn-dark">Produkte ansehen</a>
+        <a href="#kontakt" class="btn btn-light">Kontakt aufnehmen</a>
+      </div>
+    </div>
+  </div>
 
-<h2>Moderne Verpackungslösungen</h2>
+  <section class="section" id="produkte">
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">Produkte</p>
+        <h2>Drei starke Produktbereiche für moderne Versand- und Verpackungsprozesse</h2>
+        <p>
+          Ob Standardbedarf oder individuelle Lösung: Wir liefern Verpackungsprodukte,
+          die in Optik, Funktion und Alltagstauglichkeit überzeugen.
+        </p>
+      </div>
 
-<p>
-Individuelle, nachhaltige und funktionale Verpackungen für Unternehmen.
-</p>
+      <div class="product-section">
+        <div class="product-card">
+          <img src="images/kartonagen.png" alt="Kartonagen">
+          <h3>Kartonagen</h3>
+          <p>
+            Stabile Versandkartons und maßgeschneiderte Verpackungslösungen
+            für Produkte, Lagerung und sicheren Transport.
+          </p>
+        </div>
 
-</div>
+        <div class="product-card">
+          <img src="images/folien.png" alt="Verpackungsfolie">
+          <h3>Verpackungsfolie</h3>
+          <p>
+            Stretchfolie, Schutzfolie und ergänzende Folienlösungen
+            für einen zuverlässigen Produktschutz im Versand.
+          </p>
+        </div>
 
-</header>
+        <div class="product-card">
+          <img src="images/klebeband.png" alt="Klebebänder">
+          <h3>Klebebänder</h3>
+          <p>
+            Hochwertige Klebebänder für professionelle Verpackungsprozesse,
+            sicheren Verschluss und saubere Versandabläufe.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="section" id="loesungen">
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">B2B-Lösungen</p>
+        <h2>Verpackung nicht nur als Material, sondern als funktionierende Gesamtlösung</h2>
+        <p>
+          Für Geschäftskunden zählt mehr als nur der Einkauf einzelner Produkte:
+          Entscheidend ist ein sauberer, verlässlicher und wirtschaftlicher Verpackungsprozess.
+        </p>
+      </div>
 
-<div class="products">
-<img src="images/produktpalette.png">
-</div>
+      <div class="b2b-box">
+        <div>
+          <h3>Passende Lösungen für Industrie, Handel und E-Commerce</h3>
+          <p>
+            S&amp;L Verpackungen unterstützt Unternehmen mit einem klaren Fokus auf
+            praktikable Verpackungslösungen, die im täglichen Einsatz funktionieren.
+          </p>
+          <p>
+            Von Kartonagen über Folien bis zu Klebebändern denken wir Verpackung
+            entlang des tatsächlichen Bedarfs: effizient, sauber und passend
+            zu Produkt, Versandweg und Handling.
+          </p>
+        </div>
 
+        <div class="bullet-list">
+          <div class="bullet-item">Verpackungslösungen für laufende B2B-Bedarfe</div>
+          <div class="bullet-item">Saubere Optik und funktionaler Produktschutz</div>
+          <div class="bullet-item">Verlässliche Produkte für Versand und Lagerung</div>
+          <div class="bullet-item">Individuelle Ansätze statt Standard von der Stange</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="product-section">
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">Vorteile</p>
+        <h2>Warum Unternehmen auf durchdachte Verpackungslösungen setzen</h2>
+      </div>
 
-<div class="product-card">
-<img src="images/kartonagen.png">
-<h3>Kartonagen</h3>
-<p>Stabile Versandkartons und individuelle Verpackungslösungen für Industrie, Handel und E-Commerce.</p>
-</div>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <h3>Individuell passend</h3>
+          <p>
+            Verpackungslösungen, die sich am Produkt, am Versandprozess und an
+            den tatsächlichen Anforderungen orientieren.
+          </p>
+        </div>
 
-<div class="product-card">
-<img src="images/folie.png">
-<h3>Verpackungsfolie</h3>
-<p>Stretchfolie, Luftpolsterfolie und Schutzverpackungen für sicheren Transport und Lagerung.</p>
-</div>
+        <div class="benefit-card">
+          <h3>Wirtschaftlich sinnvoll</h3>
+          <p>
+            Klare, funktionale Lösungen mit Blick auf Effizienz, Handling
+            und einen reibungslosen Einsatz im Alltag.
+          </p>
+        </div>
 
-<div class="product-card">
-<img src="images/klebebaender.png">
-<h3>Klebebänder</h3>
-<p>Hochwertige Klebebänder und Verpackungslösungen für effiziente Versandprozesse.</p>
-</div>
+        <div class="benefit-card">
+          <h3>Modern und sauber</h3>
+          <p>
+            Ein professioneller Auftritt endet nicht beim Produkt –
+            auch Verpackung ist Teil des Markenbildes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <section class="contact-section" id="kontakt">
+    <div class="container contact-wrap">
+      <div class="contact-card">
+        <h3>Kontakt aufnehmen</h3>
+        <p>
+          Sie suchen eine passende Verpackungslösung oder möchten unverbindlich
+          ins Gespräch kommen? Nutzen Sie das Formular als Platzhalter für Ihre
+          spätere Anfragefunktion oder kontaktieren Sie uns direkt per E-Mail.
+        </p>
 
+        <div class="contact-form">
+          <input type="text" placeholder="Ihr Name">
+          <input type="text" placeholder="Unternehmen">
+          <input type="email" placeholder="Ihre E-Mail">
+          <textarea placeholder="Ihre Anfrage"></textarea>
+          <div class="contact-button">Anfrage senden</div>
+        </div>
+      </div>
 
-<div class="section">
+      <div class="contact-card">
+        <h3>Direkter Kontakt</h3>
+        <p>
+          Für erste Anfragen oder einen direkten Austausch erreichen Sie uns
+          auch per E-Mail.
+        </p>
 
-<div class="card">
-<h2>Individuelle Verpackungen</h2>
-<p>Wir entwickeln Verpackungslösungen, die perfekt zu Produkt, Versand und Marke passen.</p>
-</div>
+        <div class="contact-info">
+          <div class="info-box">
+            <span class="info-label">E-Mail</span>
+            <a href="mailto:info@sl-verpackungen.de">info@sl-verpackungen.de</a>
+          </div>
 
-<div class="card">
-<h2>E-Commerce Versand</h2>
-<p>Effiziente Verpackungen für Onlinehandel und Versandlösungen.</p>
-</div>
+          <div class="info-box">
+            <span class="info-label">Firma</span>
+            S&amp;L Verpackungen
+          </div>
 
-<div class="card">
-<h2>Nachhaltige Materialien</h2>
-<p>Fokus auf recycelbare und umweltfreundliche Verpackungslösungen.</p>
-</div>
+          <div class="info-box">
+            <span class="info-label">Hinweis</span>
+            Formular und rechtliche Angaben können im nächsten Schritt mit den finalen Daten ergänzt werden.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</div>
-
-<footer>
-© 2026 S&L Verpackungen
-</footer>
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 S&amp;L Verpackungen</div>
+      <div class="footer-links">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
