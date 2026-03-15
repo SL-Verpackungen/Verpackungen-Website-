@@ -1,285 +1,174 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum | S&L Verpackungen</title>
-  <meta name="description" content="Impressum von S&L Verpackungen">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    *{
-      box-sizing:border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    html{
-      scroll-behavior:smooth;
-    }
+<title>Impressum | S&L Verpackungen</title>
 
-    body{
-      margin:0;
-      font-family:'Inter',sans-serif;
-      background:#f6f6f6;
-      color:#1f1f1f;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
+<style>
 
-    .container{
-      width:min(960px, calc(100% - 40px));
-      margin:0 auto;
-    }
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:#f6f6f6;
+color:#1f1f1f;
+}
 
-    .nav{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(255,255,255,0.94);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid #ececec;
-    }
+a{
+text-decoration:none;
+color:#111;
+}
 
-    .nav-inner{
-      min-height:78px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      flex-wrap:wrap;
-    }
+.container{
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+}
 
-    .brand{
-      font-weight:800;
-      font-size:1rem;
-      letter-spacing:0.01em;
-    }
+nav{
+background:white;
+border-bottom:1px solid #ececec;
+padding:20px;
+}
 
-    .nav-links{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-      align-items:center;
-    }
+nav a{
+margin-right:20px;
+font-weight:600;
+}
 
-    .nav-links a{
-      color:#444;
-      font-weight:500;
-      font-size:0.95rem;
-    }
+.card{
+background:white;
+border-radius:18px;
+padding:40px;
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+}
 
-    .nav-links a:hover{
-      color:#000;
-    }
+h1{
+margin-top:0;
+font-size:36px;
+}
 
-    .hero{
-      background:#fff;
-      border-bottom:1px solid #ececec;
-      padding:56px 0 44px;
-    }
+h2{
+margin-top:35px;
+font-size:20px;
+}
 
-    .hero h1{
-      margin:0 0 10px;
-      font-size:clamp(2rem, 5vw, 3.4rem);
-      line-height:1.05;
-      letter-spacing:-0.03em;
-    }
+p{
+line-height:1.7;
+color:#555;
+}
 
-    .hero p{
-      margin:0;
-      max-width:700px;
-      color:#666;
-      line-height:1.7;
-      font-size:1.02rem;
-    }
+.box{
+background:#f7f7f7;
+padding:20px;
+border-radius:12px;
+margin-top:10px;
+}
 
-    .content{
-      padding:56px 0 80px;
-    }
+footer{
+background:#111;
+color:white;
+padding:30px;
+text-align:center;
+margin-top:60px;
+}
 
-    .card{
-      background:#fff;
-      border-radius:24px;
-      padding:34px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.06);
-    }
+footer a{
+color:white;
+margin:0 10px;
+}
 
-    .legal-section + .legal-section{
-      margin-top:34px;
-      padding-top:30px;
-      border-top:1px solid #ececec;
-    }
+</style>
 
-    .legal-section h2{
-      margin:0 0 14px;
-      font-size:1.2rem;
-      letter-spacing:-0.02em;
-    }
-
-    .legal-section p{
-      margin:0 0 10px;
-      color:#555;
-      line-height:1.8;
-    }
-
-    .legal-box{
-      background:#f8f8f8;
-      border:1px solid #ececec;
-      border-radius:18px;
-      padding:18px 20px;
-      margin-top:14px;
-    }
-
-    .legal-box p:last-child{
-      margin-bottom:0;
-    }
-
-    .muted{
-      color:#777;
-    }
-
-    footer{
-      background:#111;
-      color:#fff;
-    }
-
-    .footer-inner{
-      min-height:88px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      flex-wrap:wrap;
-    }
-
-    .footer-links{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-    }
-
-    .footer-links a{
-      color:#d8d8d8;
-    }
-
-    .footer-links a:hover{
-      color:#fff;
-    }
-
-    @media (max-width:640px){
-      .card{
-        padding:24px;
-        border-radius:20px;
-      }
-
-      .hero{
-        padding:42px 0 34px;
-      }
-
-      .content{
-        padding:40px 0 56px;
-      }
-    }
-  </style>
 </head>
+
 <body>
 
-  <nav class="nav">
-    <div class="container nav-inner">
-      <div class="brand">S&amp;L Verpackungen</div>
-      <div class="nav-links">
-        <a href="index.html">Startseite</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </div>
-    </div>
-  </nav>
+<nav>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Impressum</h1>
-      <p>
-        Anbieterkennzeichnung und rechtliche Pflichtangaben gemäß § 5 TMG
-        sowie Angaben zur inhaltlichen Verantwortung.
-      </p>
-    </div>
-  </section>
+<a href="index.html">Startseite</a>
+<a href="datenschutz.html">Datenschutz</a>
 
-  <main class="content">
-    <div class="container">
-      <div class="card">
+</nav>
 
-        <section class="legal-section">
-          <h2>Angaben gemäß § 5 TMG</h2>
-          <div class="legal-box">
-            <p><strong>S&amp;L Verpackungen</strong></p>
-            <p>Inhaber: [Vorname Nachname]</p>
-            <p>[Straße Hausnummer]</p>
-            <p>[PLZ Ort]</p>
-            <p>Deutschland</p>
-            <p>Telefon: [Telefonnummer]</p>
-            <p>E-Mail: info@sl-verpackungen.de</p>
-          </div>
-        </section>
+<div class="container">
 
-        <section class="legal-section">
-          <h2>Umsatzsteuer-ID</h2>
-          <div class="legal-box">
-            <p>
-              Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:
-            </p>
-            <p>[USt-IdNr., falls vorhanden]</p>
-            <p class="muted">
-              Falls noch nicht vorhanden: „Umsatzsteuer-Identifikationsnummer wird beantragt.“
-            </p>
-          </div>
-        </section>
+<div class="card">
 
-        <section class="legal-section">
-          <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
-          <div class="legal-box">
-            <p>[Vorname Nachname]</p>
-            <p>[Adresse wie oben]</p>
-          </div>
-        </section>
+<h1>Impressum</h1>
 
-        <section class="legal-section">
-          <h2>EU-Streitschlichtung</h2>
-          <p>
-            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-          </p>
-          <div class="legal-box">
-            <p>
-              <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">
-                https://ec.europa.eu/consumers/odr/
-              </a>
-            </p>
-            <p>Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
-          </div>
-        </section>
+<h2>Angaben gemäß § 5 TMG</h2>
 
-        <section class="legal-section">
-          <h2>Verbraucherstreitbeilegung</h2>
-          <p>
-            Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren
-            vor einer Verbraucherschlichtungsstelle teilzunehmen.
-          </p>
-        </section>
+<div class="box">
 
-      </div>
-    </div>
-  </main>
+<p>S&L Verpackungen</p>
+<p>Inhaber: [Vorname Nachname]</p>
 
-  <footer>
-    <div class="container footer-inner">
-      <div>© 2026 S&amp;L Verpackungen</div>
-      <div class="footer-links">
-        <a href="index.html">Startseite</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </div>
-    </div>
-  </footer>
+<p>[Straße Hausnummer]</p>
+<p>[PLZ Ort]</p>
+<p>Deutschland</p>
+
+<p>Telefon: [Telefonnummer]</p>
+<p>E-Mail: info@sl-verpackungen.de</p>
+
+</div>
+
+
+<h2>Umsatzsteuer-ID</h2>
+
+<div class="box">
+
+<p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
+
+<p>[USt-IdNr., falls vorhanden]</p>
+
+<p>Falls noch nicht vorhanden: „Umsatzsteuer-Identifikationsnummer wird beantragt.“</p>
+
+</div>
+
+
+<h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+
+<div class="box">
+
+<p>[Vorname Nachname]</p>
+<p>[Adresse wie oben]</p>
+
+</div>
+
+
+<h2>EU-Streitschlichtung</h2>
+
+<p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:</p>
+
+<p>
+<a href="https://ec.europa.eu/consumers/odr/" target="_blank">
+https://ec.europa.eu/consumers/odr/
+</a>
+</p>
+
+<p>Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
+
+
+<h2>Verbraucherstreitbeilegung</h2>
+
+<p>
+Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 S&L Verpackungen
+
+</footer>
 
 </body>
 </html>
