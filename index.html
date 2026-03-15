@@ -618,7 +618,7 @@ cursor:pointer;
           spätere Anfragefunktion oder kontaktieren Sie uns direkt per E-Mail.
         </p>
 
-       <form action="https://formsubmit.co/info@sl-verpackungen.de" method="POST" class="contact-form">
+<form action="https://formsubmit.co/info@sl-verpackungen.de" method="POST" class="contact-form">
 
 <input type="text" name="name" placeholder="Ihr Name" required>
 
@@ -631,11 +631,17 @@ cursor:pointer;
 <!-- Spam Schutz -->
 <input type="text" name="_honey" style="display:none">
 
-<!-- Kein Captcha -->
+<!-- kein Captcha -->
 <input type="hidden" name="_captcha" value="false">
 
-<!-- Betreff der Mail -->
+<!-- Betreff -->
 <input type="hidden" name="_subject" value="Neue Anfrage über sl-verpackungen.de">
+
+<!-- Autoresponse -->
+<input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Anfrage bei S&L Verpackungen. Wir melden uns schnellstmöglich bei Ihnen zurück.">
+
+<!-- Weiterleitung nach Anfrage -->
+<input type="hidden" name="_next" value="https://sl-verpackungen.de/danke.html">
 
 <button type="submit" class="contact-button">
 Anfrage senden
