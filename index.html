@@ -618,14 +618,30 @@ color:white;
           spätere Anfragefunktion oder kontaktieren Sie uns direkt per E-Mail.
         </p>
 
-        <div class="contact-form">
-          <input type="text" placeholder="Ihr Name">
-          <input type="text" placeholder="Unternehmen">
-          <input type="email" placeholder="Ihre E-Mail">
-          <textarea placeholder="Ihre Anfrage"></textarea>
-          <div class="contact-button">Anfrage senden</div>
-        </div>
-      </div>
+       <form action="https://formsubmit.co/info@sl-verpackungen.de" method="POST" class="contact-form">
+
+<input type="text" name="name" placeholder="Ihr Name" required>
+
+<input type="text" name="company" placeholder="Unternehmen">
+
+<input type="email" name="email" placeholder="Ihre E-Mail" required>
+
+<textarea name="message" placeholder="Ihre Anfrage" required></textarea>
+
+<!-- Spam Schutz -->
+<input type="text" name="_honey" style="display:none">
+
+<!-- Kein Captcha -->
+<input type="hidden" name="_captcha" value="false">
+
+<!-- Betreff der Mail -->
+<input type="hidden" name="_subject" value="Neue Anfrage über sl-verpackungen.de">
+
+<button type="submit" class="contact-button">
+Anfrage senden
+</button>
+
+</form>
 
       <div class="contact-card">
         <h3>Direkter Kontakt</h3>
