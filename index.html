@@ -80,19 +80,41 @@
     .brand{
       display:flex;
       align-items:center;
-      gap:12px;
-      font-weight:800;
+      gap:14px;
+      min-width:0;
+    }
+
+    .nav-logo{
+      width:56px;
+      height:56px;
+      object-fit:cover;
+      border-radius:18px;
+      border:1px solid rgba(230,235,242,0.95);
+      box-shadow:0 10px 24px rgba(15,23,42,0.08);
+      background:#fff;
+      flex-shrink:0;
+    }
+
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1.1;
+      min-width:0;
+    }
+
+    .brand-text strong{
       font-size:1rem;
+      font-weight:800;
+      color:var(--text);
       letter-spacing:0.01em;
     }
 
-    .brand-dot{
-      width:12px;
-      height:12px;
-      border-radius:50%;
-      background:linear-gradient(135deg, var(--accent), var(--teal));
-      box-shadow:0 0 0 8px rgba(37,99,235,0.10);
-      flex-shrink:0;
+    .brand-text span{
+      font-size:0.78rem;
+      color:var(--text-soft);
+      font-weight:600;
+      margin-top:4px;
+      letter-spacing:0.01em;
     }
 
     .nav-links{
@@ -187,39 +209,6 @@
       border-radius:50%;
       background:linear-gradient(135deg, var(--accent), var(--teal));
       display:inline-block;
-    }
-
-    .hero-logo-box{
-      position:relative;
-      max-width:560px;
-      margin:0 auto 18px;
-      padding:14px;
-      border-radius:var(--radius-xl);
-      background:linear-gradient(180deg, rgba(255,255,255,0.96), rgba(255,255,255,0.88));
-      border:1px solid rgba(230,235,242,0.9);
-      box-shadow:var(--shadow);
-      transition:0.25s ease;
-      overflow:hidden;
-    }
-
-    .hero-logo-box:hover{
-      transform:translateY(-6px);
-      box-shadow:var(--shadow-hover);
-    }
-
-    .hero-logo-box::before{
-      content:"";
-      position:absolute;
-      inset:0 0 auto 0;
-      height:4px;
-      background:linear-gradient(90deg, var(--accent), var(--teal));
-    }
-
-    .hero-logo-box img{
-      width:100%;
-      height:auto;
-      border-radius:18px;
-      display:block;
     }
 
     .hero h1{
@@ -769,6 +758,19 @@
         width:100%;
         justify-content:center;
       }
+
+      .nav-logo{
+        width:50px;
+        height:50px;
+      }
+
+      .brand-text strong{
+        font-size:0.95rem;
+      }
+
+      .brand-text span{
+        font-size:0.74rem;
+      }
     }
   </style>
 </head>
@@ -777,8 +779,11 @@
   <nav class="nav">
     <div class="container nav-inner">
       <div class="brand">
-        <span class="brand-dot"></span>
-        <span>S&amp;L Verpackungen</span>
+        <img src="images/WhatsApp Image 2026-03-10 at 13.34.05.jpeg" alt="S&L Verpackungen Logo" class="nav-logo">
+        <div class="brand-text">
+          <strong>S&amp;L Verpackungen</strong>
+          <span>Moderne Verpackungslösungen</span>
+        </div>
       </div>
 
       <div class="nav-links">
@@ -795,10 +800,6 @@
       <div class="hero-badge">
         <span></span>
         Verpackungslösungen für Industrie, Handel und E-Commerce
-      </div>
-
-      <div class="hero-logo-box">
-        <img src="images/WhatsApp Image 2026-03-10 at 13.34.05.jpeg" alt="S&L Verpackungen Logo">
       </div>
 
       <h1>Moderne Verpackungslösungen mit Struktur, Qualität und Wirkung</h1>
