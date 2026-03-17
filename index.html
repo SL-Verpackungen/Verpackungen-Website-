@@ -78,22 +78,18 @@
       color:#000;
     }
 
-.nav-cta{
-background:white;
-color:#111;
-padding:12px 18px;
-border-radius:999px;
-font-weight:600;
-border:2px solid #111;
-}
-
-.nav-cta:hover{
-background:#111;
-color:white;
-}
+    .nav-cta{
+      background:white;
+      color:#111;
+      padding:12px 18px;
+      border-radius:999px;
+      font-weight:600;
+      border:2px solid #111;
+    }
 
     .nav-cta:hover{
-      background:#2b2b2b;
+      background:#111;
+      color:white;
     }
 
     .hero-wrap{
@@ -243,6 +239,38 @@ color:white;
       line-height:1.7;
     }
 
+    .solutions-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+      margin-top:40px;
+    }
+
+    .solution-box{
+      background:#fff;
+      border-radius:16px;
+      padding:22px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.05);
+    }
+
+    .solution-box h4{
+      margin:0 0 12px;
+      font-size:1.05rem;
+    }
+
+    .solution-box ul{
+      list-style:none;
+      padding:0;
+      margin:0;
+    }
+
+    .solution-box li{
+      padding:6px 0;
+      color:#555;
+      font-size:0.95rem;
+      line-height:1.5;
+    }
+
     .benefits-grid{
       display:grid;
       grid-template-columns:repeat(3, 1fr);
@@ -355,15 +383,19 @@ color:white;
       resize:vertical;
     }
 
-  .contact-button{
-background:#111;
-color:#fff;
-padding:15px 20px;
-border-radius:14px;
-font-weight:700;
-border:none;
-cursor:pointer;
-}
+    .contact-button{
+      background:#111;
+      color:#fff;
+      padding:15px 20px;
+      border-radius:14px;
+      font-weight:700;
+      border:none;
+      cursor:pointer;
+    }
+
+    .contact-button:hover{
+      background:#2b2b2b;
+    }
 
     .contact-info{
       display:grid;
@@ -422,7 +454,8 @@ cursor:pointer;
       .product-section,
       .benefits-grid,
       .contact-wrap,
-      .b2b-box{
+      .b2b-box,
+      .solutions-grid{
         grid-template-columns:1fr;
       }
 
@@ -454,7 +487,8 @@ cursor:pointer;
 
       .product-card,
       .benefit-card,
-      .contact-card{
+      .contact-card,
+      .solution-box{
         padding:22px;
       }
 
@@ -538,6 +572,65 @@ cursor:pointer;
     </div>
   </section>
 
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <p class="eyebrow">Weitere Lösungen</p>
+        <h2>Ergänzende Verpackungslösungen für Ihren gesamten Bedarf</h2>
+        <p>
+          Neben unseren Hauptprodukten bieten wir ein breites Sortiment an ergänzenden
+          Verpackungs- und Logistiklösungen für Industrie, Handel und E-Commerce.
+        </p>
+      </div>
+
+      <div class="solutions-grid">
+        <div class="solution-box">
+          <h4>Versand & Schutz</h4>
+          <ul>
+            <li>Luftpolsterfolie</li>
+            <li>Versandtaschen</li>
+            <li>Packpapier</li>
+            <li>Seidenpapier</li>
+            <li>Wellpapp-Zuschnitte</li>
+            <li>Zwischenlagen</li>
+          </ul>
+        </div>
+
+        <div class="solution-box">
+          <h4>Polsterung</h4>
+          <ul>
+            <li>Papierpolster / Füllmaterial</li>
+            <li>Verpackungschips</li>
+            <li>Schrumpffolien</li>
+            <li>Schrumpfhauben</li>
+          </ul>
+        </div>
+
+        <div class="solution-box">
+          <h4>Paletten & Logistik</h4>
+          <ul>
+            <li>Stretchfolie (Hand & Maschine)</li>
+            <li>Umreifungsbänder</li>
+            <li>Kantenschutzwinkel</li>
+            <li>Big Bags</li>
+            <li>Paletten</li>
+          </ul>
+        </div>
+
+        <div class="solution-box">
+          <h4>Lager & Spezial</h4>
+          <ul>
+            <li>Container aus Wellpappe</li>
+            <li>Gefahrgutverpackungen</li>
+            <li>Tragetaschen</li>
+            <li>Papierpolster</li>
+            <li>Schutzverpackungen</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="loesungen">
     <div class="container">
       <div class="section-title">
@@ -614,40 +707,25 @@ cursor:pointer;
         <h3>Kontakt aufnehmen</h3>
         <p>
           Sie suchen eine passende Verpackungslösung oder möchten unverbindlich
-          ins Gespräch kommen? Nutzen Sie das Formular als Platzhalter für Ihre
-          spätere Anfragefunktion oder kontaktieren Sie uns direkt per E-Mail.
+          ins Gespräch kommen? Nutzen Sie unser Anfrageformular oder kontaktieren
+          Sie uns direkt per E-Mail.
         </p>
 
-<form action="https://formsubmit.co/info@sl-verpackungen.de" method="POST" class="contact-form">
+        <form action="https://formsubmit.co/info@sl-verpackungen.de" method="POST" class="contact-form">
+          <input type="text" name="name" placeholder="Ihr Name" required>
+          <input type="text" name="company" placeholder="Unternehmen">
+          <input type="email" name="email" placeholder="Ihre E-Mail" required>
+          <textarea name="message" placeholder="Ihre Anfrage" required></textarea>
 
-<input type="text" name="name" placeholder="Ihr Name" required>
+          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="Neue Anfrage über sl-verpackungen.de">
+          <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Anfrage bei S&L Verpackungen. Wir melden uns schnellstmöglich bei Ihnen zurück.">
+          <input type="hidden" name="_next" value="https://sl-verpackungen.de/danke.html">
 
-<input type="text" name="company" placeholder="Unternehmen">
-
-<input type="email" name="email" placeholder="Ihre E-Mail" required>
-
-<textarea name="message" placeholder="Ihre Anfrage" required></textarea>
-
-<!-- Spam Schutz -->
-<input type="text" name="_honey" style="display:none">
-
-<!-- kein Captcha -->
-<input type="hidden" name="_captcha" value="false">
-
-<!-- Betreff -->
-<input type="hidden" name="_subject" value="Neue Anfrage über sl-verpackungen.de">
-
-<!-- Autoresponse -->
-<input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Anfrage bei S&L Verpackungen. Wir melden uns schnellstmöglich bei Ihnen zurück.">
-
-<!-- Weiterleitung nach Anfrage -->
-<input type="hidden" name="_next" value="https://sl-verpackungen.de/danke.html">
-
-<button type="submit" class="contact-button">
-Anfrage senden
-</button>
-
-</form>
+          <button type="submit" class="contact-button">Anfrage senden</button>
+        </form>
+      </div>
 
       <div class="contact-card">
         <h3>Direkter Kontakt</h3>
@@ -669,7 +747,7 @@ Anfrage senden
 
           <div class="info-box">
             <span class="info-label">Hinweis</span>
-            Formular und rechtliche Angaben können im nächsten Schritt mit den finalen Daten ergänzt werden.
+            Weitere Unternehmensdaten und rechtliche Angaben können im nächsten Schritt final ergänzt werden.
           </div>
         </div>
       </div>
