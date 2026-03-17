@@ -164,40 +164,84 @@
       position:relative;
       z-index:1;
       text-align:center;
-      isolation:isolate;
     }
 
-    .hero-logo-bg{
+    .hero-logo-stage{
+      position:relative;
+      width:min(860px, 100%);
+      margin:0 auto 28px;
+      padding:26px 24px 18px;
+      border-radius:36px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.76), rgba(255,255,255,0.42));
+      border:1px solid rgba(255,255,255,0.7);
+      box-shadow:
+        0 18px 40px rgba(15,23,42,0.06),
+        inset 0 1px 0 rgba(255,255,255,0.6);
+      backdrop-filter:blur(10px);
+      overflow:hidden;
+    }
+
+    .hero-logo-stage::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(37,99,235,0.16), transparent 42%),
+        radial-gradient(circle at 85% 70%, rgba(15,118,110,0.10), transparent 28%),
+        radial-gradient(circle at 15% 65%, rgba(37,99,235,0.08), transparent 24%);
+      pointer-events:none;
+    }
+
+    .hero-logo-stage::after{
+      content:"";
+      position:absolute;
+      inset:0 0 auto 0;
+      height:4px;
+      background:linear-gradient(90deg, var(--accent), var(--teal));
+      opacity:0.9;
+    }
+
+    .hero-logo-glow{
       position:absolute;
       left:50%;
-      top:18px;
-      transform:translateX(-50%);
-      width:min(760px, 88vw);
-      opacity:0.12;
-      filter:grayscale(8%) blur(0.3px);
+      top:50%;
+      transform:translate(-50%, -50%);
+      width:min(540px, 68vw);
+      height:min(220px, 28vw);
+      background:radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.58) 45%, rgba(255,255,255,0) 75%);
+      filter:blur(8px);
       pointer-events:none;
       z-index:0;
-      user-select:none;
     }
 
-    .hero-content{
+    .hero-logo{
       position:relative;
       z-index:1;
+      width:min(620px, 86%);
+      margin:0 auto;
+      object-fit:contain;
+      filter:
+        drop-shadow(0 18px 34px rgba(15,23,42,0.08))
+        saturate(1.03)
+        contrast(1.02);
     }
 
     .hero-badge{
       display:inline-flex;
       align-items:center;
       gap:10px;
-      background:rgba(255,255,255,0.78);
-      border:1px solid rgba(255,255,255,0.8);
+      background:rgba(255,255,255,0.82);
+      border:1px solid rgba(255,255,255,0.85);
       box-shadow:0 10px 30px rgba(15,23,42,0.06);
       padding:10px 16px;
       border-radius:999px;
       font-size:0.9rem;
       font-weight:700;
       color:#334155;
-      margin-bottom:26px;
+      margin-bottom:22px;
+      position:relative;
+      z-index:2;
     }
 
     .hero-badge span{
@@ -209,8 +253,8 @@
     }
 
     .hero h1{
-      margin:34px auto 12px;
-      max-width:920px;
+      margin:10px auto 12px;
+      max-width:900px;
       font-size:clamp(2.35rem, 5vw, 4.6rem);
       line-height:0.98;
       letter-spacing:-0.04em;
@@ -720,10 +764,14 @@
         padding-top:36px;
       }
 
-      .hero-logo-bg{
-        width:min(620px, 96vw);
-        top:44px;
-        opacity:0.10;
+      .hero-logo-stage{
+        padding:22px 18px 14px;
+        border-radius:30px;
+        margin-bottom:24px;
+      }
+
+      .hero-logo{
+        width:min(560px, 90%);
       }
     }
 
@@ -755,7 +803,6 @@
 
       .hero h1{
         line-height:1.02;
-        margin-top:24px;
       }
 
       .btn{
@@ -763,10 +810,20 @@
         justify-content:center;
       }
 
-      .hero-logo-bg{
-        width:min(520px, 120vw);
-        top:56px;
-        opacity:0.08;
+      .hero-logo-stage{
+        width:100%;
+        padding:18px 14px 10px;
+        border-radius:24px;
+        margin-bottom:22px;
+      }
+
+      .hero-logo{
+        width:min(460px, 96%);
+      }
+
+      .hero-logo-glow{
+        width:min(360px, 82vw);
+        height:140px;
       }
     }
   </style>
@@ -791,40 +848,42 @@
 
   <div class="hero-wrap">
     <div class="container hero">
-      <img class="hero-logo-bg" src="images/WhatsApp Image 2026-03-10 at 13.34.05.jpeg" alt="S&L Verpackungen Logo">
 
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span></span>
-          Verpackungslösungen für Industrie, Handel und E-Commerce
+      <div class="hero-logo-stage">
+        <div class="hero-logo-glow"></div>
+        <img class="hero-logo" src="images/WhatsApp Image 2026-03-10 at 13.34.05.jpeg" alt="S&L Verpackungen Logo">
+      </div>
+
+      <div class="hero-badge">
+        <span></span>
+        Verpackungslösungen für Industrie, Handel und E-Commerce
+      </div>
+
+      <h1>Moderne Verpackungslösungen mit Struktur, Qualität und Wirkung</h1>
+      <h2>S&amp;L Verpackungen – funktional, sauber und passend für Ihren Bedarf</h2>
+      <p>
+        Individuelle, wirtschaftliche und hochwertige Verpackungslösungen für Unternehmen,
+        die im Alltag funktionieren – von Kartonagen über Folien bis hin zu professionellen
+        Klebeband- und Versandlösungen.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#produkte" class="btn btn-dark">Produkte ansehen</a>
+        <a href="#kontakt" class="btn btn-light">Kontakt aufnehmen</a>
+      </div>
+
+      <div class="hero-highlights">
+        <div class="highlight-box">
+          <strong>Individuelle Lösungen</strong>
+          <span>Passend zu Produkt, Versandweg und praktischem Tagesgeschäft.</span>
         </div>
-
-        <h1>Moderne Verpackungslösungen mit Struktur, Qualität und Wirkung</h1>
-        <h2>S&amp;L Verpackungen – funktional, sauber und passend für Ihren Bedarf</h2>
-        <p>
-          Individuelle, wirtschaftliche und hochwertige Verpackungslösungen für Unternehmen,
-          die im Alltag funktionieren – von Kartonagen über Folien bis hin zu professionellen
-          Klebeband- und Versandlösungen.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#produkte" class="btn btn-dark">Produkte ansehen</a>
-          <a href="#kontakt" class="btn btn-light">Kontakt aufnehmen</a>
+        <div class="highlight-box">
+          <strong>Professioneller Auftritt</strong>
+          <span>Saubere Verpackung als Teil eines starken Markenbildes.</span>
         </div>
-
-        <div class="hero-highlights">
-          <div class="highlight-box">
-            <strong>Individuelle Lösungen</strong>
-            <span>Passend zu Produkt, Versandweg und praktischem Tagesgeschäft.</span>
-          </div>
-          <div class="highlight-box">
-            <strong>Professioneller Auftritt</strong>
-            <span>Saubere Verpackung als Teil eines starken Markenbildes.</span>
-          </div>
-          <div class="highlight-box">
-            <strong>Zuverlässig im Einsatz</strong>
-            <span>Produkte für Lager, Logistik, Versand und laufende B2B-Bedarfe.</span>
-          </div>
+        <div class="highlight-box">
+          <strong>Zuverlässig im Einsatz</strong>
+          <span>Produkte für Lager, Logistik, Versand und laufende B2B-Bedarfe.</span>
         </div>
       </div>
     </div>
