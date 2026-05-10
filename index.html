@@ -23,6 +23,7 @@
     }
 
     *{box-sizing:border-box;}
+
     html{scroll-behavior:smooth;}
 
     body{
@@ -251,7 +252,7 @@
       position:absolute;
       left:34px;
       right:34px;
-      bottom:38px;
+      bottom:32px;
       z-index:2;
       color:#fff;
       font-size:clamp(1.8rem, 3vw, 3.25rem);
@@ -262,19 +263,16 @@
 
     .hero-logo-stage{
       position:absolute;
-      top:24px;
-      left:24px;
-      right:24px;
-      z-index:3;
-      height:210px;
+      inset:28px 28px auto 28px;
+      z-index:2;
+      min-height:210px;
       display:flex;
       align-items:center;
       justify-content:center;
       padding:28px;
       border-radius:26px;
-      background:rgba(255,255,255,0.96);
+      background:rgba(255,255,255,0.94);
       border:1px solid rgba(255,255,255,0.55);
-      backdrop-filter:blur(10px);
     }
 
     .hero-logo{
@@ -605,7 +603,10 @@
       line-height:1.78;
     }
 
-    .contact-form{display:grid;gap:13px;}
+    .contact-form{
+      display:grid;
+      gap:13px;
+    }
 
     .contact-form input,
     .contact-form textarea{
@@ -624,7 +625,10 @@
     .contact-form input:focus,
     .contact-form textarea:focus{border-color:#111;}
 
-    .contact-form textarea{min-height:145px;resize:vertical;}
+    .contact-form textarea{
+      min-height:145px;
+      resize:vertical;
+    }
 
     .contact-button{
       margin-top:8px;
@@ -638,7 +642,10 @@
       transition:0.22s ease;
     }
 
-    .contact-button:hover{transform:translateY(-2px);background:#000;}
+    .contact-button:hover{
+      transform:translateY(-2px);
+      background:#000;
+    }
 
     .form-note{
       margin:4px 0 0 !important;
@@ -662,7 +669,12 @@
       border:1px solid var(--line);
     }
 
-    .info-box{background:#fff;padding:22px;transition:background 0.2s ease;}
+    .info-box{
+      background:#fff;
+      padding:22px;
+      transition:background 0.2s ease;
+    }
+
     .info-box:hover{background:#faf8f4;}
 
     .info-box a{
@@ -690,7 +702,12 @@
       color:#111;
     }
 
-    .whatsapp-link svg{width:20px;height:20px;flex-shrink:0;fill:var(--wa);}
+    .whatsapp-link svg{
+      width:20px;
+      height:20px;
+      flex-shrink:0;
+      fill:var(--wa);
+    }
 
     .whatsapp-float{
       position:fixed;
@@ -718,7 +735,10 @@
       white-space:nowrap;
     }
 
-    .whatsapp-float:hover .whatsapp-tooltip{opacity:1;transform:translateX(0);}
+    .whatsapp-float:hover .whatsapp-tooltip{
+      opacity:1;
+      transform:translateX(0);
+    }
 
     .whatsapp-button{
       position:relative;
@@ -749,7 +769,11 @@
       box-shadow:0 24px 44px rgba(37,211,102,0.38);
     }
 
-    .whatsapp-button svg{width:28px;height:28px;fill:#fff;}
+    .whatsapp-button svg{
+      width:28px;
+      height:28px;
+      fill:#fff;
+    }
 
     @keyframes waPulse{
       0%{transform:scale(0.92);opacity:0.8;}
@@ -757,7 +781,11 @@
       100%{transform:scale(1.18);opacity:0;}
     }
 
-    footer{background:var(--dark);color:#fff;margin-top:0;}
+    footer{
+      background:var(--dark);
+      color:#fff;
+      margin-top:0;
+    }
 
     .footer-inner{
       min-height:110px;
@@ -769,11 +797,27 @@
       padding:28px 0;
     }
 
-    .footer-brand{display:flex;flex-direction:column;gap:6px;}
-    .footer-brand strong{font-size:1rem;letter-spacing:0.01em;}
-    .footer-brand span{color:#bdb6aa;font-size:0.9rem;}
+    .footer-brand{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
 
-    .footer-links{display:flex;gap:22px;flex-wrap:wrap;}
+    .footer-brand strong{
+      font-size:1rem;
+      letter-spacing:0.01em;
+    }
+
+    .footer-brand span{
+      color:#bdb6aa;
+      font-size:0.9rem;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:22px;
+      flex-wrap:wrap;
+    }
 
     .footer-links a{
       color:#d8d2c8;
@@ -790,7 +834,9 @@
       .contact-wrap,
       .b2b-box,
       .solutions-grid,
-      .hero-highlights{grid-template-columns:1fr;}
+      .hero-highlights{
+        grid-template-columns:1fr;
+      }
 
       .hero-visual{min-height:460px;}
 
@@ -819,16 +865,11 @@
       .hero-visual{min-height:390px;border-radius:24px;}
 
       .hero-logo-stage{
-        top:18px;
-        left:18px;
-        right:18px;
-        height:150px;
-        min-height:auto;
+        inset:18px 18px auto 18px;
+        min-height:160px;
         padding:20px;
         border-radius:18px;
       }
-
-      .hero-logo{width:min(340px, 100%);}
 
       .hero-visual-title{
         left:22px;
