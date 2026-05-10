@@ -63,10 +63,30 @@
       display:flex;
       align-items:center;
       gap:14px;
-      font-weight:800;
-      font-size:0.98rem;
-      letter-spacing:0.02em;
       color:var(--dark);
+    }
+
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1;
+    }
+
+    .brand-text strong{
+      font-size:1.05rem;
+      letter-spacing:-0.035em;
+      color:#111;
+      font-weight:850;
+    }
+
+    .brand-text span{
+      margin-top:6px;
+      font-size:0.68rem;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      color:#8a8378;
+      font-weight:750;
+      white-space:nowrap;
     }
 
     .brand-mark{
@@ -893,6 +913,20 @@
     }
 
     @media (max-width: 640px){
+      .brand-mark{
+        width:48px;
+        height:48px;
+      }
+
+      .brand-text strong{
+        font-size:1rem;
+      }
+
+      .brand-text span{
+        font-size:0.62rem;
+        letter-spacing:0.14em;
+      }
+
       .container{width:min(100% - 28px, 1180px);}
       .hero-wrap{padding:44px 0 58px;}
       .hero h1{line-height:0.98;}
@@ -948,7 +982,10 @@
         <span class="brand-mark">
           <img src="images/SLLogo.png" alt="S&L Verpackungen Logo">
         </span>
-        <span>S&amp;L Verpackungen</span>
+        <div class="brand-text">
+          <strong>S&amp;L</strong>
+          <span>Packaging Solutions</span>
+        </div>
       </div>
 
       <div class="nav-links">
