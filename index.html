@@ -70,18 +70,23 @@
     }
 
     .brand-mark{
-      width:38px;
-      height:38px;
-      border-radius:50%;
-      background:var(--dark);
-      color:#fff;
-      display:inline-flex;
+      width:52px;
+      height:52px;
+      border-radius:12px;
+      background:#fff;
+      display:flex;
       align-items:center;
       justify-content:center;
-      font-size:0.72rem;
-      font-weight:800;
-      letter-spacing:-0.03em;
+      overflow:hidden;
+      border:1px solid rgba(17,17,17,0.08);
       flex-shrink:0;
+    }
+
+    .brand-mark img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      padding:6px;
     }
 
     .nav-links{
@@ -133,6 +138,34 @@
     }
 
     .hero-content{max-width:690px;}
+
+    .hero-image-card{
+      position:relative;
+      min-height:560px;
+      border-radius:34px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      background:#111;
+      isolation:isolate;
+    }
+
+    .hero-image-card::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.28));
+      pointer-events:none;
+      z-index:1;
+    }
+
+    .hero-image-card img{
+      width:100%;
+      height:100%;
+      min-height:560px;
+      object-fit:cover;
+      object-position:center;
+      filter:saturate(0.96) contrast(1.04);
+    }
 
     .kicker{
       display:inline-flex;
@@ -838,7 +871,8 @@
         grid-template-columns:1fr;
       }
 
-      .hero-visual{min-height:460px;}
+      .hero-image-card{min-height:430px;}
+      .hero-image-card img{min-height:430px;}
 
       .section-title,
       .section-title.center{
@@ -862,7 +896,16 @@
       .container{width:min(100% - 28px, 1180px);}
       .hero-wrap{padding:44px 0 58px;}
       .hero h1{line-height:0.98;}
-      .hero-visual{min-height:390px;border-radius:24px;}
+      .hero-image-card{
+        order:-1;
+        min-height:360px;
+        border-radius:24px;
+      }
+
+      .hero-image-card img{
+        min-height:360px;
+        object-position:center;
+      }
 
       .hero-logo-stage{
         inset:18px 18px auto 18px;
@@ -902,7 +945,9 @@
   <nav class="nav">
     <div class="container nav-inner">
       <div class="brand">
-        <span class="brand-mark">S&amp;L</span>
+        <span class="brand-mark">
+          <img src="images/SLLogo.png" alt="S&L Verpackungen Logo">
+        </span>
         <span>S&amp;L Verpackungen</span>
       </div>
 
@@ -950,12 +995,8 @@
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="S&L Verpackungen">
-          <div class="hero-logo-stage">
-            <img class="hero-logo" src="images/SLLogo.png" alt="S&L Verpackungen Logo">
-          </div>
-          <div class="hero-pattern"></div>
-          <div class="hero-visual-title">Verpackungslösungen<br>für professionelle Abläufe</div>
+        <div class="hero-image-card">
+          <img src="images/hero-lager.png" alt="Modernes Lager mit Verpackungslösungen von S&L Verpackungen">
         </div>
       </div>
     </div>
