@@ -251,7 +251,7 @@
       position:absolute;
       left:34px;
       right:34px;
-      bottom:32px;
+      bottom:38px;
       z-index:2;
       color:#fff;
       font-size:clamp(1.8rem, 3vw, 3.25rem);
@@ -262,18 +262,19 @@
 
     .hero-logo-stage{
       position:absolute;
-      top:0;
-      left:0;
-      right:0;
-      z-index:2;
-      min-height:250px;
+      top:24px;
+      left:24px;
+      right:24px;
+      z-index:3;
+      height:210px;
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:36px 28px;
-      border-radius:0 0 30px 30px;
-      background:rgba(255,255,255,0.94);
-      border-bottom:1px solid rgba(255,255,255,0.55);
+      padding:28px;
+      border-radius:26px;
+      background:rgba(255,255,255,0.96);
+      border:1px solid rgba(255,255,255,0.55);
+      backdrop-filter:blur(10px);
     }
 
     .hero-logo{
@@ -818,12 +819,13 @@
       .hero-visual{min-height:390px;border-radius:24px;}
 
       .hero-logo-stage{
-        top:0;
-        left:0;
-        right:0;
-        min-height:175px;
-        padding:24px 20px;
-        border-radius:0 0 22px 22px;
+        top:18px;
+        left:18px;
+        right:18px;
+        height:150px;
+        min-height:auto;
+        padding:20px;
+        border-radius:18px;
       }
 
       .hero-logo{width:min(340px, 100%);}
