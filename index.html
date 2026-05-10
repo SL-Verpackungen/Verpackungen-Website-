@@ -46,27 +46,75 @@
       position:sticky;
       top:0;
       z-index:1000;
-      background:rgba(244,241,234,0.9);
+      background:
+        linear-gradient(135deg, rgba(250,248,244,0.94), rgba(232,225,214,0.88)),
+        radial-gradient(circle at 10% 20%, rgba(17,17,17,0.07), transparent 24%),
+        radial-gradient(circle at 88% 18%, rgba(207,190,160,0.24), transparent 28%);
       backdrop-filter:blur(18px);
-      border-bottom:1px solid rgba(222,216,204,0.9);
+      border-bottom:1px solid rgba(17,17,17,0.08);
+      box-shadow:0 12px 38px rgba(17,17,17,0.05);
     }
 
     .nav-inner{
-      min-height:86px;
+      min-height:92px;
       display:flex;
       align-items:center;
       justify-content:space-between;
       gap:24px;
+      position:relative;
+    }
+
+    .nav-inner::before{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      height:1px;
+      background:linear-gradient(90deg, transparent, rgba(17,17,17,0.22), transparent);
+      opacity:0.35;
+      pointer-events:none;
     }
 
     .brand{
       display:flex;
       align-items:center;
-      gap:14px;
-      font-weight:800;
-      font-size:0.98rem;
-      letter-spacing:0.02em;
+      gap:15px;
       color:var(--dark);
+      min-width:0;
+    }
+
+    .brand-copy{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+      min-width:0;
+    }
+
+    .brand-slogan{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:9px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.58);
+      border:1px solid rgba(17,17,17,0.08);
+      box-shadow:0 10px 24px rgba(17,17,17,0.06);
+      color:#1f1b16;
+      font-size:0.83rem;
+      font-weight:750;
+      letter-spacing:-0.01em;
+      white-space:nowrap;
+    }
+
+    .brand-slogan::before{
+      content:"";
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:#111;
+      box-shadow:0 0 0 5px rgba(17,17,17,0.08);
+      flex-shrink:0;
     }
 
     .brand-mark{
@@ -860,10 +908,38 @@
         flex-direction:column;
       }
 
+      .brand-slogan{
+        white-space:normal;
+        line-height:1.3;
+      }
+
       .nav-links{gap:16px;}
     }
 
     @media (max-width: 640px){
+      .nav-inner{
+        min-height:auto;
+        gap:16px;
+      }
+
+      .brand{
+        align-items:center;
+        gap:12px;
+      }
+
+      .brand-mark{
+        width:48px;
+        height:48px;
+        border-radius:11px;
+      }
+
+      .brand-slogan{
+        padding:8px 12px;
+        font-size:0.76rem;
+        line-height:1.28;
+        max-width:260px;
+      }
+
       .container{width:min(100% - 28px, 1180px);}
       .hero-wrap{padding:44px 0 58px;}
       .hero h1{line-height:0.98;}
@@ -910,7 +986,9 @@
         <span class="brand-mark">
           <img src="images/SLLogo.png" alt="S&L Verpackungen Logo">
         </span>
-        <span>S&amp;L Verpackungen</span>
+        <div class="brand-copy">
+          <span class="brand-slogan">Effizienz beginnt beim richtigen Verpackungsmaterial</span>
+        </div>
       </div>
 
       <div class="nav-links">
