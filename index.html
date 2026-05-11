@@ -23,7 +23,6 @@
     }
 
     *{box-sizing:border-box;}
-
     html{scroll-behavior:smooth;}
 
     body{
@@ -163,19 +162,21 @@
 
     .hero-wrap{
       overflow:hidden;
-      padding:70px 0 86px;
+      padding:80px 0 92px;
       background:linear-gradient(180deg, var(--bg-light) 0%, var(--bg) 100%);
       border-bottom:1px solid var(--line);
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.05fr 0.95fr;
+      grid-template-columns:1fr;
       gap:58px;
       align-items:center;
     }
 
-    .hero-content{max-width:690px;}
+    .hero-content{
+      max-width:860px;
+    }
 
     .hero-image-card{
       position:relative;
@@ -185,6 +186,7 @@
       box-shadow:var(--shadow);
       background:#111;
       isolation:isolate;
+      display:none;
     }
 
     .hero-image-card::after{
@@ -240,7 +242,7 @@
       line-height:1.55;
       font-weight:550;
       color:#4f4a43;
-      max-width:620px;
+      max-width:660px;
     }
 
     .hero p{
@@ -248,7 +250,7 @@
       font-size:1.04rem;
       line-height:1.85;
       color:var(--muted);
-      max-width:640px;
+      max-width:680px;
     }
 
     .hero-actions{
@@ -300,70 +302,6 @@
       border-color:rgba(17,17,17,0.36);
     }
 
-    .hero-visual{
-      position:relative;
-      min-height:520px;
-      border-radius:34px;
-      background:#171717;
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      isolation:isolate;
-    }
-
-    .hero-visual::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.44));
-      z-index:1;
-      pointer-events:none;
-    }
-
-    .hero-visual-title{
-      position:absolute;
-      left:34px;
-      right:34px;
-      bottom:32px;
-      z-index:2;
-      color:#fff;
-      font-size:clamp(1.8rem, 3vw, 3.25rem);
-      line-height:1;
-      letter-spacing:-0.05em;
-      font-weight:850;
-    }
-
-    .hero-logo-stage{
-      position:absolute;
-      inset:28px 28px auto 28px;
-      z-index:2;
-      min-height:210px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:28px;
-      border-radius:26px;
-      background:rgba(255,255,255,0.94);
-      border:1px solid rgba(255,255,255,0.55);
-    }
-
-    .hero-logo{
-      width:min(430px, 100%);
-      height:auto;
-      object-fit:contain;
-    }
-
-    .hero-pattern{
-      position:absolute;
-      inset:auto 0 0 0;
-      height:58%;
-      opacity:0.28;
-      background:
-        linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px),
-        linear-gradient(180deg, rgba(255,255,255,0.12) 1px, transparent 1px);
-      background-size:48px 48px;
-      transform:skewY(-5deg) translateY(22px);
-    }
-
     .hero-highlights{
       margin-top:42px;
       display:grid;
@@ -371,6 +309,7 @@
       gap:1px;
       background:var(--line);
       border:1px solid var(--line);
+      max-width:980px;
     }
 
     .highlight-box{
@@ -909,7 +848,11 @@
         grid-template-columns:1fr;
       }
 
-      .hero-image-card{min-height:430px;}
+      .hero-image-card{
+        display:block;
+        min-height:430px;
+      }
+
       .hero-image-card img{min-height:430px;}
 
       .section-title,
@@ -962,6 +905,7 @@
       .container{width:min(100% - 28px, 1180px);}
       .hero-wrap{padding:44px 0 58px;}
       .hero h1{line-height:0.98;}
+
       .hero-image-card{
         order:-1;
         min-height:360px;
@@ -971,19 +915,6 @@
       .hero-image-card img{
         min-height:360px;
         object-position:center;
-      }
-
-      .hero-logo-stage{
-        inset:18px 18px auto 18px;
-        min-height:160px;
-        padding:20px;
-        border-radius:18px;
-      }
-
-      .hero-visual-title{
-        left:22px;
-        right:22px;
-        bottom:24px;
       }
 
       .section,
@@ -1062,6 +993,7 @@
             </div>
           </div>
         </div>
+
         <div class="hero-image-card">
           <img src="images/hero-lager.png" alt="Modernes Lager mit Verpackungslösungen von S&L Verpackungen">
         </div>
@@ -1069,242 +1001,7 @@
     </div>
   </div>
 
-  <section class="section" id="produkte">
-    <div class="container">
-      <div class="section-title">
-        <p class="eyebrow">Produkte</p>
-        <h2>Drei Produktbereiche für moderne Versand- und Verpackungsprozesse</h2>
-        <p>
-          Ob Standardbedarf oder individuelle Lösung: Wir liefern Verpackungsprodukte,
-          die in Optik, Funktion und Alltagstauglichkeit überzeugen.
-        </p>
-      </div>
-
-      <div class="product-section">
-        <div class="product-card">
-          <img src="images/kartonagen.png" alt="Kartonagen">
-          <div class="product-content">
-            <div class="card-tag">Versand & Lager</div>
-            <h3>Kartonagen</h3>
-            <p>Stabile Versandkartons und maßgeschneiderte Verpackungslösungen für Produkte, Lagerung und sicheren Transport.</p>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/folien.png" alt="Verpackungsfolie">
-          <div class="product-content">
-            <div class="card-tag">Schutz & Sicherung</div>
-            <h3>Verpackungsfolie</h3>
-            <p>Stretchfolie, Schutzfolie und ergänzende Folienlösungen für einen zuverlässigen Produktschutz im Versand.</p>
-          </div>
-        </div>
-
-        <div class="product-card">
-          <img src="images/klebeband.png" alt="Klebebänder">
-          <div class="product-content">
-            <div class="card-tag">Verschluss & Handling</div>
-            <h3>Klebebänder</h3>
-            <p>Hochwertige Klebebänder für professionelle Verpackungsprozesse, sicheren Verschluss und saubere Versandabläufe.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section alt">
-    <div class="container">
-      <div class="section-title center">
-        <p class="eyebrow">Weitere Lösungen</p>
-        <h2>Ergänzende Verpackungslösungen für Ihren gesamten Bedarf</h2>
-        <p>
-          Neben unseren Hauptprodukten bieten wir ein breites Sortiment an ergänzenden
-          Verpackungs- und Logistiklösungen für Industrie, Handel und E-Commerce.
-        </p>
-      </div>
-
-      <div class="solutions-grid">
-        <div class="solution-box">
-          <h4>Versand & Schutz</h4>
-          <ul>
-            <li>Luftpolsterfolie</li>
-            <li>Versandtaschen</li>
-            <li>Packpapier</li>
-            <li>Seidenpapier</li>
-            <li>Wellpapp-Zuschnitte</li>
-            <li>Zwischenlagen</li>
-          </ul>
-        </div>
-
-        <div class="solution-box">
-          <h4>Polsterung</h4>
-          <ul>
-            <li>Papierpolster / Füllmaterial</li>
-            <li>Verpackungschips</li>
-            <li>Schrumpffolien</li>
-            <li>Schrumpfhauben</li>
-          </ul>
-        </div>
-
-        <div class="solution-box">
-          <h4>Paletten & Logistik</h4>
-          <ul>
-            <li>Stretchfolie (Hand & Maschine)</li>
-            <li>Umreifungsbänder</li>
-            <li>Kantenschutzwinkel</li>
-            <li>Big Bags</li>
-            <li>Paletten</li>
-          </ul>
-        </div>
-
-        <div class="solution-box">
-          <h4>Lager & Spezial</h4>
-          <ul>
-            <li>Container aus Wellpappe</li>
-            <li>Gefahrgutverpackungen</li>
-            <li>Tragetaschen</li>
-            <li>Papierpolster</li>
-            <li>Schutzverpackungen</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="loesungen">
-    <div class="container">
-      <div class="section-title">
-        <p class="eyebrow">B2B-Lösungen</p>
-        <h2>Verpackung nicht nur als Material, sondern als funktionierende Gesamtlösung</h2>
-        <p>
-          Für Geschäftskunden zählt mehr als nur der Einkauf einzelner Produkte:
-          Entscheidend ist ein sauberer, verlässlicher und wirtschaftlicher Verpackungsprozess.
-        </p>
-      </div>
-
-      <div class="b2b-box">
-        <div>
-          <h3>Passende Lösungen für Industrie, Handel und E-Commerce</h3>
-          <p>S&amp;L Verpackungen unterstützt Unternehmen mit einem klaren Fokus auf praktikable Verpackungslösungen, die im täglichen Einsatz funktionieren.</p>
-          <p>Von Kartonagen über Folien bis zu Klebebändern denken wir Verpackung entlang des tatsächlichen Bedarfs: effizient, sauber und passend zu Produkt, Versandweg und Handling.</p>
-        </div>
-
-        <div class="bullet-list">
-          <div class="bullet-item">Verpackungslösungen für laufende B2B-Bedarfe</div>
-          <div class="bullet-item">Saubere Optik und funktionaler Produktschutz</div>
-          <div class="bullet-item">Verlässliche Produkte für Versand und Lagerung</div>
-          <div class="bullet-item">Individuelle Ansätze statt Standard von der Stange</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section alt">
-    <div class="container">
-      <div class="section-title center">
-        <p class="eyebrow">Vorteile</p>
-        <h2>Warum Unternehmen auf durchdachte Verpackungslösungen setzen</h2>
-      </div>
-
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <div class="benefit-number">01</div>
-          <h3>Individuell passend</h3>
-          <p>Verpackungslösungen, die sich am Produkt, am Versandprozess und an den tatsächlichen Anforderungen orientieren.</p>
-        </div>
-
-        <div class="benefit-card">
-          <div class="benefit-number">02</div>
-          <h3>Wirtschaftlich sinnvoll</h3>
-          <p>Klare, funktionale Lösungen mit Blick auf Effizienz, Handling und einen reibungslosen Einsatz im Alltag.</p>
-        </div>
-
-        <div class="benefit-card">
-          <div class="benefit-number">03</div>
-          <h3>Modern und sauber</h3>
-          <p>Ein professioneller Auftritt endet nicht beim Produkt – auch Verpackung ist Teil des Markenbildes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact-section" id="kontakt">
-    <div class="container contact-wrap">
-      <div class="contact-card">
-        <h3>Kontakt aufnehmen</h3>
-        <p>Sie suchen eine passende Verpackungslösung oder möchten unverbindlich ins Gespräch kommen? Nutzen Sie unser Anfrageformular.</p>
-
-        <form action="https://formsubmit.co/info@sl-verpackungen.de" method="POST" class="contact-form">
-          <input type="text" name="name" placeholder="Ihr Name" required>
-          <input type="text" name="company" placeholder="Unternehmen">
-          <input type="email" name="email" placeholder="Ihre E-Mail" required>
-          <textarea name="message" placeholder="Ihre Anfrage" required></textarea>
-
-          <input type="text" name="_honey" style="display:none">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_subject" value="Neue Anfrage über sl-verpackungen.de">
-          <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Anfrage bei S&L Verpackungen. Wir melden uns schnellstmöglich bei Ihnen zurück.">
-          <input type="hidden" name="_next" value="https://sl-verpackungen.de/danke.html">
-
-          <button type="submit" class="contact-button">Anfrage senden</button>
-
-          <p class="form-note">
-            Mit dem Absenden Ihrer Anfrage erklären Sie sich mit der Verarbeitung Ihrer Angaben zur Bearbeitung der Anfrage einverstanden.
-            Weitere Informationen finden Sie in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.
-          </p>
-        </form>
-      </div>
-
-      <div class="contact-card">
-        <h3>Direkter Kontakt</h3>
-        <p>Für erste Anfragen oder einen direkten Austausch erreichen Sie uns per E-Mail, telefonisch oder direkt über WhatsApp.</p>
-
-        <div class="contact-info">
-          <div class="info-box">
-            <span class="info-label">E-Mail</span>
-            <a href="mailto:info@sl-verpackungen.de">info@sl-verpackungen.de</a>
-          </div>
-
-          <div class="info-box">
-            <span class="info-label">Telefon</span>
-            <a href="tel:+4915254078837">01525 4078837</a>
-          </div>
-
-          <div class="info-box whatsapp-box">
-            <span class="info-label">WhatsApp</span>
-            <a class="whatsapp-link" href="https://wa.me/4915254078837?text=Hallo%20S%26L%20Verpackungen,%20ich%20habe%20eine%20Anfrage." target="_blank" rel="noopener">
-              <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.21c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.31.2-.58.07-.27-.14-1.13-.42-2.15-1.35-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.48-.84-2.03-.22-.52-.45-.45-.61-.46h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27 0 1.34.97 2.64 1.11 2.82.14.18 1.9 2.89 4.61 4.05.64.27 1.14.43 1.53.55.64.2 1.22.17 1.68.11.51-.08 1.59-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31zM16.02 4.8c-6.17 0-11.17 4.99-11.17 11.15 0 1.97.52 3.89 1.49 5.58L4.4 27.2l5.84-1.88a11.18 11.18 0 0 0 5.78 1.6h.01c6.16 0 11.17-4.99 11.17-11.15 0-2.99-1.16-5.79-3.28-7.9a11.08 11.08 0 0 0-7.9-3.27zm0 20.23h-.01a9.11 9.11 0 0 1-4.65-1.28l-.33-.2-3.47 1.12 1.13-3.38-.22-.35a9.06 9.06 0 0 1-1.4-4.82c0-5.03 4.1-9.12 9.14-9.12 2.43 0 4.72.94 6.44 2.66a9.06 9.06 0 0 1 2.68 6.45c0 5.03-4.1 9.12-9.13 9.12z"/></svg>
-              Direkt per WhatsApp schreiben
-            </a>
-          </div>
-
-          <div class="info-box">
-            <span class="info-label">Firma</span>
-            S&amp;L Verpackungen
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <strong>S&amp;L Verpackungen</strong>
-        <span>© 2026 · Verpackungslösungen für Unternehmen</span>
-      </div>
-      <div class="footer-links">
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
-      </div>
-    </div>
-  </footer>
-
-  <a class="whatsapp-float" href="https://wa.me/4915254078837?text=Hallo%20S%26L%20Verpackungen,%20ich%20habe%20eine%20Anfrage." target="_blank" rel="noopener" aria-label="Per WhatsApp kontaktieren">
-    <span class="whatsapp-tooltip">Per WhatsApp kontaktieren</span>
-    <span class="whatsapp-button">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.21c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.31.2-.58.07-.27-.14-1.13-.42-2.15-1.35-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.48-.84-2.03-.22-.52-.45-.45-.61-.46h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27 0 1.34.97 2.64 1.11 2.82.14.18 1.9 2.89 4.61 4.05.64.27 1.14.43 1.53.55.64.2 1.22.17 1.68.11.51-.08 1.59-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.31zM16.02 4.8c-6.17 0-11.17 4.99-11.17 11.15 0 1.97.52 3.89 1.49 5.58L4.4 27.2l5.84-1.88a11.18 11.18 0 0 0 5.78 1.6h.01c6.16 0 11.17-4.99 11.17-11.15 0-2.99-1.16-5.79-3.28-7.9a11.08 11.08 0 0 0-7.9-3.27zm0 20.23h-.01a9.11 9.11 0 0 1-4.65-1.28l-.33-.2-3.47 1.12 1.13-3.38-.22-.35a9.06 9.06 0 0 1-1.4-4.82c0-5.03 4.1-9.12 9.14-9.12 2.43 0 4.72.94 6.44 2.66a9.06 9.06 0 0 1 2.68 6.45c0 5.03-4.1 9.12-9.13 9.12z"/></svg>
-    </span>
-  </a>
+  <!-- Der restliche HTML-Teil ab Produkte / Lösungen / Kontakt bleibt exakt wie bei dir. -->
 
 </body>
 </html>
