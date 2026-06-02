@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>S&L Verpackungen</title>
-  <meta name="description" content="Moderne Verpackungslösungen für Unternehmen – Kartonagen, Verpackungsfolie und Klebebänder.">
+  <meta name="description" content="Verpackungsmaterial direkt vom Hersteller – Kartonagen, Verpackungsfolie und Klebebänder für Unternehmen. Faire Konditionen, schnelle Lieferung, persönlicher Kontakt.">
 
   <style>
     :root{
@@ -20,10 +20,10 @@
       --wa-dark:#1faa52;
       --shadow:0 24px 70px rgba(17,17,17,0.08);
       --shadow-soft:0 12px 35px rgba(17,17,17,0.06);
+      --accent:#c8a96e;
     }
 
     *{box-sizing:border-box;}
-
     html{scroll-behavior:smooth;}
 
     body{
@@ -67,98 +67,72 @@
     .nav-inner::before{
       content:"";
       position:absolute;
-      left:0;
-      right:0;
-      bottom:0;
-      height:1px;
+      left:0;right:0;bottom:0;height:1px;
       background:linear-gradient(90deg, transparent, rgba(17,17,17,0.22), transparent);
-      opacity:0.35;
-      pointer-events:none;
+      opacity:0.35;pointer-events:none;
     }
 
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:15px;
-      color:var(--dark);
-      min-width:0;
-    }
-
-    .brand-copy{
-      display:flex;
-      flex-direction:column;
-      gap:6px;
-      min-width:0;
-    }
+    .brand{display:flex;align-items:center;gap:15px;color:var(--dark);min-width:0;}
+    .brand-copy{display:flex;flex-direction:column;gap:6px;min-width:0;}
 
     .brand-slogan{
-      display:inline-flex;
-      align-items:center;
-      gap:0;
-      padding:9px 14px;
-      border-radius:999px;
-      background:rgba(255,255,255,0.58);
-      border:1px solid rgba(17,17,17,0.08);
+      display:inline-flex;align-items:center;gap:0;
+      padding:9px 14px;border-radius:999px;
+      background:rgba(255,255,255,0.58);border:1px solid rgba(17,17,17,0.08);
       box-shadow:0 10px 24px rgba(17,17,17,0.06);
-      color:#1f1b16;
-      font-size:0.83rem;
-      font-weight:750;
-      letter-spacing:-0.01em;
-      white-space:nowrap;
+      color:#1f1b16;font-size:0.83rem;font-weight:750;
+      letter-spacing:-0.01em;white-space:nowrap;
     }
 
     .brand-mark{
-      width:52px;
-      height:52px;
-      border-radius:12px;
-      background:#fff;
+      width:52px;height:52px;border-radius:12px;
+      background:#fff;display:flex;align-items:center;justify-content:center;
+      overflow:hidden;border:1px solid rgba(17,17,17,0.08);flex-shrink:0;
+    }
+
+    .brand-mark img{width:100%;height:100%;object-fit:contain;padding:6px;}
+
+    .nav-links{display:flex;align-items:center;gap:28px;flex-wrap:wrap;}
+    .nav-links a{color:#332f29;font-weight:650;font-size:0.92rem;transition:0.22s ease;}
+    .nav-links a:hover{color:#000;opacity:0.72;}
+
+    .nav-cta{
+      background:var(--dark);color:#fff !important;
+      padding:13px 18px;border-radius:999px;font-weight:750;
+      box-shadow:0 14px 28px rgba(17,17,17,0.16);
+    }
+    .nav-cta:hover{transform:translateY(-1px);opacity:1 !important;background:#000;}
+
+    .usp-banner{
+      background:var(--dark);
+      color:#fff;
+      padding:11px 0;
+      text-align:center;
+      font-size:0.82rem;
+      font-weight:700;
+      letter-spacing:0.04em;
+    }
+
+    .usp-banner-inner{
       display:flex;
       align-items:center;
       justify-content:center;
-      overflow:hidden;
-      border:1px solid rgba(17,17,17,0.08);
-      flex-shrink:0;
-    }
-
-    .brand-mark img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      padding:6px;
-    }
-
-    .nav-links{
-      display:flex;
-      align-items:center;
       gap:28px;
       flex-wrap:wrap;
     }
 
-    .nav-links a{
-      color:#332f29;
-      font-weight:650;
-      font-size:0.92rem;
-      transition:0.22s ease;
+    .usp-item{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:#e8e0d4;
     }
 
-    .nav-links a:hover{
-      color:#000;
-      opacity:0.72;
-    }
-
-    .nav-cta{
-      background:var(--dark);
-      color:#fff !important;
-      padding:13px 18px;
-      border-radius:999px;
-      font-weight:750;
-      box-shadow:0 14px 28px rgba(17,17,17,0.16);
-    }
-
-    .nav-cta:hover{
-      transform:translateY(-1px);
-      opacity:1 !important;
-      background:#000;
+    .usp-item::before{
+      content:"✓";
+      color:var(--accent);
+      font-weight:900;
+      font-size:0.9rem;
     }
 
     .hero-wrap{
@@ -178,611 +152,328 @@
     .hero-content{max-width:860px;}
 
     .hero-image-card{
-      position:relative;
-      min-height:560px;
-      border-radius:34px;
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      background:#111;
-      isolation:isolate;
-      display:none;
+      position:relative;min-height:560px;border-radius:34px;overflow:hidden;
+      box-shadow:var(--shadow);background:#111;isolation:isolate;display:none;
     }
 
     .hero-image-card::after{
-      content:"";
-      position:absolute;
-      inset:0;
+      content:"";position:absolute;inset:0;
       background:linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.25));
-      pointer-events:none;
-      z-index:1;
+      pointer-events:none;z-index:1;
     }
 
     .hero-image-card img{
-      width:100%;
-      height:100%;
-      min-height:560px;
-      object-fit:cover;
-      object-position:center;
+      width:100%;height:100%;min-height:560px;
+      object-fit:cover;object-position:center;
       filter:saturate(0.96) contrast(1.04);
     }
 
     .kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      color:#3b342d;
-      font-size:0.78rem;
-      font-weight:800;
-      letter-spacing:0.12em;
-      text-transform:uppercase;
-      margin-bottom:24px;
+      display:inline-flex;align-items:center;gap:10px;
+      color:#3b342d;font-size:0.78rem;font-weight:800;
+      letter-spacing:0.12em;text-transform:uppercase;margin-bottom:24px;
     }
 
-    .kicker::before{
-      content:"";
-      width:34px;
-      height:1px;
-      background:var(--dark);
-      display:inline-block;
-    }
+    .kicker::before{content:"";width:34px;height:1px;background:var(--dark);display:inline-block;}
 
     .hero h1{
       margin:0;
       font-size:clamp(2.65rem, 5.8vw, 5.6rem);
-      line-height:0.94;
-      letter-spacing:-0.065em;
-      color:var(--dark);
-      max-width:880px;
+      line-height:0.94;letter-spacing:-0.065em;color:var(--dark);max-width:880px;
     }
 
     .hero h2{
       margin:24px 0 0;
       font-size:clamp(1.05rem, 1.8vw, 1.35rem);
-      line-height:1.55;
-      font-weight:550;
-      color:#4f4a43;
-      max-width:660px;
+      line-height:1.55;font-weight:550;color:#4f4a43;max-width:660px;
     }
 
     .hero p{
-      margin:22px 0 0;
-      font-size:1.04rem;
-      line-height:1.85;
-      color:var(--muted);
-      max-width:680px;
+      margin:22px 0 0;font-size:1.04rem;
+      line-height:1.85;color:var(--muted);max-width:680px;
     }
 
-    .hero-actions{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-top:34px;
-    }
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px;}
 
     .btn{
-      padding:15px 22px;
-      border-radius:999px;
-      font-weight:800;
-      transition:0.22s ease;
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      font-size:0.94rem;
+      padding:15px 22px;border-radius:999px;font-weight:800;
+      transition:0.22s ease;display:inline-flex;align-items:center;
+      gap:10px;font-size:0.94rem;
     }
 
-    .btn::after{
-      content:"→";
-      font-size:1rem;
-      transition:transform 0.2s ease;
-    }
-
+    .btn::after{content:"→";font-size:1rem;transition:transform 0.2s ease;}
     .btn:hover::after{transform:translateX(4px);}
 
-    .btn-dark{
-      background:var(--dark);
-      color:#fff;
-      box-shadow:0 18px 36px rgba(17,17,17,0.18);
-    }
+    .btn-dark{background:var(--dark);color:#fff;box-shadow:0 18px 36px rgba(17,17,17,0.18);}
+    .btn-dark:hover{transform:translateY(-2px);background:#000;}
 
-    .btn-dark:hover{
-      transform:translateY(-2px);
-      background:#000;
-    }
-
-    .btn-light{
-      background:transparent;
-      color:var(--dark);
-      border:1px solid rgba(17,17,17,0.22);
-    }
-
-    .btn-light:hover{
-      transform:translateY(-2px);
-      background:#fff;
-      border-color:rgba(17,17,17,0.36);
-    }
+    .btn-light{background:transparent;color:var(--dark);border:1px solid rgba(17,17,17,0.22);}
+    .btn-light:hover{transform:translateY(-2px);background:#fff;border-color:rgba(17,17,17,0.36);}
 
     .hero-highlights{
       margin-top:42px;
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:1px;
-      background:var(--line);
-      border:1px solid var(--line);
-      max-width:980px;
+      display:grid;grid-template-columns:repeat(3, 1fr);
+      gap:1px;background:var(--line);border:1px solid var(--line);max-width:980px;
     }
 
-    .highlight-box{
-      background:var(--bg-light);
-      padding:24px;
-      text-align:left;
-    }
+    .highlight-box{background:var(--bg-light);padding:24px;text-align:left;}
+    .highlight-box strong{display:block;font-size:1rem;margin-bottom:9px;color:var(--dark);}
+    .highlight-box span{color:var(--muted);font-size:0.95rem;line-height:1.6;}
 
-    .highlight-box strong{
-      display:block;
-      font-size:1rem;
-      margin-bottom:9px;
-      color:var(--dark);
-    }
+    .section{padding:104px 0;background:var(--bg);}
+    .section.alt{background:var(--bg-light);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
 
-    .highlight-box span{
-      color:var(--muted);
-      font-size:0.95rem;
-      line-height:1.6;
-    }
-
-    .section{
-      padding:104px 0;
-      background:var(--bg);
-    }
-
-    .section.alt{
-      background:var(--bg-light);
-      border-top:1px solid var(--line);
-      border-bottom:1px solid var(--line);
-    }
-
-    .section-title{
-      max-width:850px;
-      margin:0 0 52px;
-    }
-
-    .section-title.center{
-      text-align:center;
-      margin:0 auto 52px;
-    }
+    .section-title{max-width:850px;margin:0 0 52px;}
+    .section-title.center{text-align:center;margin:0 auto 52px;}
 
     .eyebrow{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      margin:0 0 16px;
-      color:#433d34;
-      text-transform:uppercase;
-      letter-spacing:0.12em;
-      font-size:0.75rem;
-      font-weight:850;
+      display:inline-flex;align-items:center;gap:10px;margin:0 0 16px;
+      color:#433d34;text-transform:uppercase;letter-spacing:0.12em;
+      font-size:0.75rem;font-weight:850;
     }
-
-    .eyebrow::before{
-      content:"";
-      width:30px;
-      height:1px;
-      background:#111;
-      display:inline-block;
-    }
-
-    .section-title.center .eyebrow::after{
-      content:"";
-      width:30px;
-      height:1px;
-      background:#111;
-      display:inline-block;
-    }
+    .eyebrow::before{content:"";width:30px;height:1px;background:#111;display:inline-block;}
+    .section-title.center .eyebrow::after{content:"";width:30px;height:1px;background:#111;display:inline-block;}
 
     .section-title h2{
-      margin:0;
-      font-size:clamp(2.05rem, 4.2vw, 4.2rem);
-      line-height:0.98;
-      letter-spacing:-0.055em;
-      color:var(--dark);
+      margin:0;font-size:clamp(2.05rem, 4.2vw, 4.2rem);
+      line-height:0.98;letter-spacing:-0.055em;color:var(--dark);
     }
-
     .section-title p{
-      margin:22px 0 0;
-      color:var(--muted);
-      line-height:1.85;
-      font-size:1.02rem;
-      max-width:720px;
+      margin:22px 0 0;color:var(--muted);line-height:1.85;
+      font-size:1.02rem;max-width:720px;
     }
+    .section-title.center p{margin-left:auto;margin-right:auto;}
 
-    .section-title.center p{
-      margin-left:auto;
-      margin-right:auto;
-    }
-
-    .product-section{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:22px;
-    }
+    .product-section{display:grid;grid-template-columns:repeat(3, 1fr);gap:22px;}
 
     .product-card{
-      background:var(--panel);
-      border:1px solid var(--line);
-      overflow:hidden;
-      transition:transform 0.24s ease, box-shadow 0.24s ease;
+      background:var(--panel);border:1px solid var(--line);
+      overflow:hidden;transition:transform 0.24s ease, box-shadow 0.24s ease;
     }
-
-    .product-card:hover{
-      transform:translateY(-6px);
-      box-shadow:var(--shadow-soft);
-    }
-
-    .product-card img{
-      width:100%;
-      height:295px;
-      object-fit:cover;
-      filter:saturate(0.92) contrast(1.02);
-    }
-
+    .product-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-soft);}
+    .product-card img{width:100%;height:295px;object-fit:cover;filter:saturate(0.92) contrast(1.02);}
     .product-content{padding:28px;}
 
     .card-tag{
-      display:inline-block;
-      font-size:0.72rem;
-      font-weight:850;
-      letter-spacing:0.12em;
-      text-transform:uppercase;
-      color:var(--muted);
-      margin-bottom:14px;
+      display:inline-block;font-size:0.72rem;font-weight:850;
+      letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;
     }
-
-    .product-card h3{
-      margin:0 0 12px;
-      font-size:1.55rem;
-      letter-spacing:-0.035em;
-      color:var(--dark);
-    }
-
-    .product-card p{
-      margin:0;
-      color:var(--muted);
-      font-size:0.98rem;
-      line-height:1.75;
-    }
+    .product-card h3{margin:0 0 12px;font-size:1.55rem;letter-spacing:-0.035em;color:var(--dark);}
+    .product-card p{margin:0;color:var(--muted);font-size:0.98rem;line-height:1.75;}
 
     .solutions-grid{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:1px;
-      margin-top:44px;
-      background:var(--line);
-      border:1px solid var(--line);
+      display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+      margin-top:44px;background:var(--line);border:1px solid var(--line);
     }
 
-    .solution-box{
-      background:var(--bg-light);
-      padding:30px;
-      transition:0.22s ease;
-    }
-
+    .solution-box{background:var(--bg-light);padding:30px;transition:0.22s ease;}
     .solution-box:hover{background:#fff;}
-
-    .solution-box h4{
-      margin:0 0 18px;
-      font-size:1.05rem;
-      color:var(--dark);
-      letter-spacing:-0.02em;
-    }
-
-    .solution-box ul{
-      list-style:none;
-      padding:0;
-      margin:0;
-    }
+    .solution-box h4{margin:0 0 18px;font-size:1.05rem;color:var(--dark);letter-spacing:-0.02em;}
+    .solution-box ul{list-style:none;padding:0;margin:0;}
 
     .solution-box li{
-      position:relative;
-      padding:8px 0 8px 18px;
-      color:var(--muted);
-      font-size:0.95rem;
-      line-height:1.45;
-      border-top:1px solid rgba(222,216,204,0.58);
+      position:relative;padding:8px 0 8px 18px;color:var(--muted);
+      font-size:0.95rem;line-height:1.45;border-top:1px solid rgba(222,216,204,0.58);
     }
-
     .solution-box li:first-child{border-top:none;}
-
     .solution-box li::before{
-      content:"";
-      width:5px;
-      height:5px;
-      border-radius:50%;
-      background:var(--dark);
-      position:absolute;
-      left:0;
-      top:17px;
+      content:"";width:5px;height:5px;border-radius:50%;background:var(--dark);
+      position:absolute;left:0;top:17px;
     }
 
     .b2b-box{
-      background:var(--dark);
-      color:#fff;
-      padding:56px;
-      display:grid;
-      grid-template-columns:1.15fr 0.85fr;
-      gap:44px;
-      align-items:start;
-      box-shadow:var(--shadow);
+      background:var(--dark);color:#fff;padding:56px;
+      display:grid;grid-template-columns:1.15fr 0.85fr;
+      gap:44px;align-items:start;box-shadow:var(--shadow);
     }
-
     .b2b-box h3{
-      margin:0 0 18px;
-      font-size:clamp(1.9rem, 3vw, 3rem);
-      line-height:1;
-      letter-spacing:-0.055em;
+      margin:0 0 18px;font-size:clamp(1.9rem, 3vw, 3rem);
+      line-height:1;letter-spacing:-0.055em;
     }
+    .b2b-box p{margin:0 0 16px;color:#d8d2c8;line-height:1.85;max-width:680px;}
 
-    .b2b-box p{
-      margin:0 0 16px;
-      color:#d8d2c8;
-      line-height:1.85;
-      max-width:680px;
-    }
-
-    .bullet-list{
-      display:grid;
-      gap:1px;
-      background:var(--line-dark);
-      border:1px solid var(--line-dark);
-    }
-
-    .bullet-item{
-      background:#1b1b1b;
-      padding:18px 20px;
-      color:#fff;
-      font-weight:700;
-      line-height:1.45;
-    }
+    .bullet-list{display:grid;gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);}
+    .bullet-item{background:#1b1b1b;padding:18px 20px;color:#fff;font-weight:700;line-height:1.45;}
 
     .benefits-grid{
-      display:grid;
-      grid-template-columns:repeat(3, 1fr);
-      gap:1px;
-      background:var(--line);
-      border:1px solid var(--line);
+      display:grid;grid-template-columns:repeat(3, 1fr);
+      gap:1px;background:var(--line);border:1px solid var(--line);
     }
-
-    .benefit-card{
-      background:var(--bg-light);
-      padding:34px;
-      min-height:250px;
-    }
-
+    .benefit-card{background:var(--bg-light);padding:34px;min-height:250px;}
     .benefit-number{
+      display:block;color:var(--muted);font-weight:850;
+      letter-spacing:0.12em;font-size:0.78rem;margin-bottom:50px;
+    }
+    .benefit-card h3{margin:0 0 12px;font-size:1.4rem;letter-spacing:-0.035em;color:var(--dark);}
+    .benefit-card p{margin:0;color:var(--muted);line-height:1.75;}
+
+    .testimonials-section{
+      background:var(--dark);
+      padding:92px 0;
+    }
+
+    .testimonials-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1px;
+      background:rgba(255,255,255,0.1);
+      border:1px solid rgba(255,255,255,0.1);
+      margin-top:52px;
+    }
+
+    .testimonial-card{
+      background:#1a1a1a;
+      padding:36px;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+      transition:background 0.22s ease;
+    }
+
+    .testimonial-card:hover{background:#202020;}
+
+    .testimonial-quote{
+      color:#d8d2c8;
+      font-size:1.02rem;
+      line-height:1.8;
+      font-style:italic;
+      flex:1;
+    }
+
+    .testimonial-quote::before{
+      content:"\201E";
+      color:var(--accent);
+      font-size:2.5rem;
+      line-height:0;
+      vertical-align:-0.6rem;
+      margin-right:4px;
+      font-style:normal;
+    }
+
+    .testimonial-author{
+      border-top:1px solid rgba(255,255,255,0.1);
+      padding-top:18px;
+    }
+
+    .testimonial-name{
       display:block;
-      color:var(--muted);
-      font-weight:850;
-      letter-spacing:0.12em;
-      font-size:0.78rem;
-      margin-bottom:50px;
+      color:#fff;
+      font-weight:800;
+      font-size:0.95rem;
+      margin-bottom:4px;
     }
 
-    .benefit-card h3{
-      margin:0 0 12px;
-      font-size:1.4rem;
-      letter-spacing:-0.035em;
-      color:var(--dark);
+    .testimonial-company{
+      display:block;
+      color:#837b70;
+      font-size:0.82rem;
+      font-weight:600;
+      letter-spacing:0.06em;
+      text-transform:uppercase;
     }
 
-    .benefit-card p{
+    .testimonial-stars{
+      color:var(--accent);
+      font-size:0.9rem;
+      letter-spacing:2px;
+    }
+
+    .testimonials-eyebrow{
+      display:inline-flex;align-items:center;gap:10px;margin:0 0 16px;
+      color:#837b70;text-transform:uppercase;letter-spacing:0.12em;
+      font-size:0.75rem;font-weight:850;
+    }
+    .testimonials-eyebrow::before{content:"";width:30px;height:1px;background:#837b70;display:inline-block;}
+
+    .testimonials-title{
+      color:#fff;
+      font-size:clamp(2.05rem, 4.2vw, 4.2rem);
+      line-height:0.98;
+      letter-spacing:-0.055em;
       margin:0;
-      color:var(--muted);
-      line-height:1.75;
     }
 
-    .contact-section{
-      background:var(--bg-light);
-      border-top:1px solid var(--line);
-    }
+    .contact-section{background:var(--bg-light);border-top:1px solid var(--line);}
 
     .contact-wrap{
       padding:104px 0;
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:24px;
-      align-items:start;
+      display:grid;grid-template-columns:1fr 1fr;
+      gap:24px;align-items:start;
     }
 
     .contact-card{
-      background:#fff;
-      border:1px solid var(--line);
-      padding:36px;
-      min-height:100%;
+      background:#fff;border:1px solid var(--line);
+      padding:36px;min-height:100%;
     }
+    .contact-card h3{margin:0 0 12px;font-size:1.75rem;letter-spacing:-0.04em;color:var(--dark);}
+    .contact-card p{margin:0 0 24px;color:var(--muted);line-height:1.78;}
 
-    .contact-card h3{
-      margin:0 0 12px;
-      font-size:1.75rem;
-      letter-spacing:-0.04em;
-      color:var(--dark);
-    }
-
-    .contact-card p{
-      margin:0 0 24px;
-      color:var(--muted);
-      line-height:1.78;
-    }
-
-    .contact-form{
-      display:grid;
-      gap:13px;
-    }
+    .contact-form{display:grid;gap:13px;}
 
     .contact-form input,
     .contact-form textarea{
-      width:100%;
-      border:none;
-      border-bottom:1px solid var(--line);
-      border-radius:0;
-      padding:16px 0;
-      font:inherit;
-      background:#fff;
-      outline:none;
-      transition:border-color 0.2s ease;
-      color:var(--text);
+      width:100%;border:none;border-bottom:1px solid var(--line);
+      border-radius:0;padding:16px 0;font:inherit;
+      background:#fff;outline:none;transition:border-color 0.2s ease;color:var(--text);
     }
-
     .contact-form input:focus,
     .contact-form textarea:focus{border-color:#111;}
-
-    .contact-form textarea{
-      min-height:145px;
-      resize:vertical;
-    }
+    .contact-form textarea{min-height:145px;resize:vertical;}
 
     .contact-button{
-      margin-top:8px;
-      background:var(--dark);
-      color:#fff;
-      padding:16px 20px;
-      border-radius:999px;
-      font-weight:850;
-      border:none;
-      cursor:pointer;
-      transition:0.22s ease;
+      margin-top:8px;background:var(--dark);color:#fff;
+      padding:16px 20px;border-radius:999px;font-weight:850;
+      border:none;cursor:pointer;transition:0.22s ease;
     }
-
-    .contact-button:hover{
-      transform:translateY(-2px);
-      background:#000;
-    }
+    .contact-button:hover{transform:translateY(-2px);background:#000;}
 
     .form-note{
-      margin:4px 0 0 !important;
-      font-size:0.82rem;
-      line-height:1.55 !important;
-      color:#77716a !important;
+      margin:4px 0 0 !important;font-size:0.82rem;
+      line-height:1.55 !important;color:#77716a !important;
     }
-
-    .form-note a{
-      color:#111;
-      font-weight:800;
-      text-decoration:underline;
-      text-underline-offset:3px;
-    }
+    .form-note a{color:#111;font-weight:800;text-decoration:underline;text-underline-offset:3px;}
 
     .contact-info{
-      display:grid;
-      gap:1px;
-      margin-top:18px;
-      background:var(--line);
-      border:1px solid var(--line);
+      display:grid;gap:1px;margin-top:18px;
+      background:var(--line);border:1px solid var(--line);
     }
-
-    .info-box{
-      background:#fff;
-      padding:22px;
-      transition:background 0.2s ease;
-    }
-
+    .info-box{background:#fff;padding:22px;transition:background 0.2s ease;}
     .info-box:hover{background:#faf8f4;}
-
-    .info-box a{
-      font-weight:800;
-      color:#111;
-      word-break:break-word;
-    }
-
+    .info-box a{font-weight:800;color:#111;word-break:break-word;}
     .info-label{
-      display:block;
-      font-size:0.72rem;
-      text-transform:uppercase;
-      letter-spacing:0.12em;
-      color:#837b70;
-      margin-bottom:8px;
-      font-weight:850;
+      display:block;font-size:0.72rem;text-transform:uppercase;
+      letter-spacing:0.12em;color:#837b70;margin-bottom:8px;font-weight:850;
     }
-
     .whatsapp-box{background:#f8fff9;}
-
-    .whatsapp-link{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      color:#111;
-    }
-
-    .whatsapp-link svg{
-      width:20px;
-      height:20px;
-      flex-shrink:0;
-      fill:var(--wa);
-    }
+    .whatsapp-link{display:inline-flex;align-items:center;gap:10px;color:#111;}
+    .whatsapp-link svg{width:20px;height:20px;flex-shrink:0;fill:var(--wa);}
 
     .whatsapp-float{
-      position:fixed;
-      right:22px;
-      bottom:22px;
-      z-index:1200;
-      display:flex;
-      align-items:center;
-      gap:12px;
+      position:fixed;right:22px;bottom:22px;z-index:1200;
+      display:flex;align-items:center;gap:12px;
     }
-
     .whatsapp-tooltip{
-      background:rgba(17,17,17,0.94);
-      color:#fff;
-      padding:12px 14px;
-      border-radius:999px;
-      font-size:0.86rem;
-      font-weight:750;
-      line-height:1.35;
-      box-shadow:0 16px 34px rgba(17,17,17,0.24);
-      opacity:0;
-      transform:translateX(8px);
-      pointer-events:none;
-      transition:opacity 0.22s ease, transform 0.22s ease;
-      white-space:nowrap;
+      background:rgba(17,17,17,0.94);color:#fff;
+      padding:12px 14px;border-radius:999px;font-size:0.86rem;
+      font-weight:750;line-height:1.35;box-shadow:0 16px 34px rgba(17,17,17,0.24);
+      opacity:0;transform:translateX(8px);pointer-events:none;
+      transition:opacity 0.22s ease, transform 0.22s ease;white-space:nowrap;
     }
-
-    .whatsapp-float:hover .whatsapp-tooltip{
-      opacity:1;
-      transform:translateX(0);
-    }
-
+    .whatsapp-float:hover .whatsapp-tooltip{opacity:1;transform:translateX(0);}
     .whatsapp-button{
-      position:relative;
-      width:62px;
-      height:62px;
-      border-radius:50%;
+      position:relative;width:62px;height:62px;border-radius:50%;
       background:linear-gradient(135deg, var(--wa), var(--wa-dark));
       box-shadow:0 18px 34px rgba(37,211,102,0.32);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      transition:transform 0.22s ease, box-shadow 0.22s ease;
-      isolation:isolate;
+      display:flex;align-items:center;justify-content:center;
+      transition:transform 0.22s ease, box-shadow 0.22s ease;isolation:isolate;
     }
-
     .whatsapp-button::after{
-      content:"";
-      position:absolute;
-      inset:-8px;
-      border-radius:50%;
+      content:"";position:absolute;inset:-8px;border-radius:50%;
       border:1px solid rgba(37,211,102,0.28);
-      animation:waPulse 2.4s ease-out infinite;
-      z-index:-1;
+      animation:waPulse 2.4s ease-out infinite;z-index:-1;
     }
-
-    .whatsapp-button:hover{
-      transform:translateY(-4px) scale(1.03);
-      box-shadow:0 24px 44px rgba(37,211,102,0.38);
-    }
-
-    .whatsapp-button svg{
-      width:28px;
-      height:28px;
-      fill:#fff;
-    }
+    .whatsapp-button:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 24px 44px rgba(37,211,102,0.38);}
+    .whatsapp-button svg{width:28px;height:28px;fill:#fff;}
 
     @keyframes waPulse{
       0%{transform:scale(0.92);opacity:0.8;}
@@ -790,50 +481,16 @@
       100%{transform:scale(1.18);opacity:0;}
     }
 
-    footer{
-      background:var(--dark);
-      color:#fff;
-      margin-top:0;
-    }
-
+    footer{background:var(--dark);color:#fff;margin-top:0;}
     .footer-inner{
-      min-height:110px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:22px;
-      flex-wrap:wrap;
-      padding:28px 0;
+      min-height:110px;display:flex;align-items:center;
+      justify-content:space-between;gap:22px;flex-wrap:wrap;padding:28px 0;
     }
-
-    .footer-brand{
-      display:flex;
-      flex-direction:column;
-      gap:6px;
-    }
-
-    .footer-brand strong{
-      font-size:1rem;
-      letter-spacing:0.01em;
-    }
-
-    .footer-brand span{
-      color:#bdb6aa;
-      font-size:0.9rem;
-    }
-
-    .footer-links{
-      display:flex;
-      gap:22px;
-      flex-wrap:wrap;
-    }
-
-    .footer-links a{
-      color:#d8d2c8;
-      transition:0.2s ease;
-      font-weight:650;
-    }
-
+    .footer-brand{display:flex;flex-direction:column;gap:6px;}
+    .footer-brand strong{font-size:1rem;letter-spacing:0.01em;}
+    .footer-brand span{color:#bdb6aa;font-size:0.9rem;}
+    .footer-links{display:flex;gap:22px;flex-wrap:wrap;}
+    .footer-links a{color:#d8d2c8;transition:0.2s ease;font-weight:650;}
     .footer-links a:hover{color:#fff;}
 
     @media (max-width: 1020px){
@@ -843,89 +500,38 @@
       .contact-wrap,
       .b2b-box,
       .solutions-grid,
-      .hero-highlights{
+      .hero-highlights,
+      .testimonials-grid{
         grid-template-columns:1fr;
       }
-
-      .hero-image-card{
-        display:block;
-        min-height:430px;
-      }
-
+      .hero-image-card{display:block;min-height:430px;}
       .hero-image-card img{min-height:430px;}
-
       .section-title,
-      .section-title.center{
-        text-align:left;
-        margin-left:0;
-        margin-right:0;
-      }
-
+      .section-title.center{text-align:left;margin-left:0;margin-right:0;}
       .section-title.center .eyebrow::after{display:none;}
-
-      .nav-inner{
-        padding:16px 0;
-        align-items:flex-start;
-        flex-direction:column;
-      }
-
-      .brand-slogan{
-        white-space:normal;
-        line-height:1.3;
-      }
-
+      .nav-inner{padding:16px 0;align-items:flex-start;flex-direction:column;}
+      .brand-slogan{white-space:normal;line-height:1.3;}
       .nav-links{gap:16px;}
+      .usp-banner-inner{gap:16px;}
     }
 
     @media (max-width: 640px){
-      .nav-inner{
-        min-height:auto;
-        gap:16px;
-      }
-
-      .brand{
-        align-items:center;
-        gap:12px;
-      }
-
-      .brand-mark{
-        width:48px;
-        height:48px;
-        border-radius:11px;
-      }
-
-      .brand-slogan{
-        padding:8px 12px;
-        font-size:0.76rem;
-        line-height:1.28;
-        max-width:260px;
-      }
-
+      .nav-inner{min-height:auto;gap:16px;}
+      .brand{align-items:center;gap:12px;}
+      .brand-mark{width:48px;height:48px;border-radius:11px;}
+      .brand-slogan{padding:8px 12px;font-size:0.76rem;line-height:1.28;max-width:260px;}
       .container{width:min(100% - 28px, 1180px);}
       .hero-wrap{padding:44px 0 58px;}
       .hero h1{line-height:0.98;}
-
-      .hero-image-card{
-        order:-1;
-        min-height:360px;
-        border-radius:24px;
-      }
-
-      .hero-image-card img{
-        min-height:360px;
-        object-position:center;
-      }
-
+      .hero-image-card{order:-1;min-height:360px;border-radius:24px;}
+      .hero-image-card img{min-height:360px;object-position:center;}
       .section,
-      .contact-wrap{
-        padding-top:74px;
-        padding-bottom:74px;
-      }
-
+      .contact-wrap{padding-top:74px;padding-bottom:74px;}
       .b2b-box,
       .contact-card,
       .benefit-card,
-      .solution-box{padding:26px;}
+      .solution-box,
+      .testimonial-card{padding:26px;}
       .product-card img{height:230px;}
       .product-content{padding:24px;}
       .btn{width:100%;justify-content:center;}
@@ -933,10 +539,20 @@
       .whatsapp-tooltip{display:none;}
       .whatsapp-button{width:58px;height:58px;}
       .whatsapp-button svg{width:25px;height:25px;}
+      .usp-item{font-size:0.78rem;}
     }
   </style>
 </head>
 <body>
+
+  <div class="usp-banner">
+    <div class="container usp-banner-inner">
+      <span class="usp-item">Direkt vom Hersteller</span>
+      <span class="usp-item">Faire Konditionen ohne Umwege</span>
+      <span class="usp-item">Persönlicher Ansprechpartner</span>
+      <span class="usp-item">Schnelle Lieferung in die Region</span>
+    </div>
+  </div>
 
   <nav class="nav">
     <div class="container nav-inner">
@@ -945,13 +561,14 @@
           <img src="images/SLLogo.png" alt="S&L Verpackungen Logo">
         </span>
         <div class="brand-copy">
-          <span class="brand-slogan">Effizienz beginnt beim richtigen Verpackungsmaterial</span>
+          <span class="brand-slogan">Verpackungsmaterial direkt vom Hersteller</span>
         </div>
       </div>
 
       <div class="nav-links">
         <a href="#produkte">Produkte</a>
         <a href="#loesungen">Lösungen</a>
+        <a href="#stimmen">Referenzen</a>
         <a href="#kontakt">Kontakt</a>
         <a href="#kontakt" class="nav-cta">Anfrage stellen</a>
       </div>
@@ -963,32 +580,31 @@
       <div class="hero-grid">
         <div class="hero-content">
           <div class="kicker">Verpackungslösungen für B2B</div>
-
-          <h1>Verpackung, die sauber funktioniert.</h1>
-          <h2>S&amp;L Verpackungen – Kartonagen, Folien und Klebebänder für Industrie, Handel und E-Commerce.</h2>
+          <h1>Weniger zahlen. Besser verpacken.</h1>
+          <h2>S&amp;L Verpackungen – Kartonagen, Folien und Klebebänder direkt vom Hersteller. Für Unternehmen, die beim Einkauf nicht draufzahlen wollen.</h2>
           <p>
-            Individuelle, wirtschaftliche und hochwertige Verpackungslösungen für Unternehmen,
-            die im Alltag überzeugen – vom laufenden Versandbedarf bis zur passenden Lösung
-            für Lager, Logistik und Produktschutz.
+            Viele Unternehmen kaufen Verpackungsmaterial noch im Handel oder online zu Preisen,
+            die sie nicht sein müssen. Wir liefern die gleiche Qualität – direkter,
+            persönlicher und zu fairen Konditionen, die im B2B wirklich Sinn ergeben.
           </p>
 
           <div class="hero-actions">
-            <a href="#produkte" class="btn btn-dark">Produkte ansehen</a>
-            <a href="#kontakt" class="btn btn-light">Kontakt aufnehmen</a>
+            <a href="#kontakt" class="btn btn-dark">Jetzt Angebot anfragen</a>
+            <a href="#produkte" class="btn btn-light">Produkte ansehen</a>
           </div>
 
           <div class="hero-highlights">
             <div class="highlight-box">
-              <strong>Individuell</strong>
-              <span>Passend zu Produkt, Versandweg und Tagesgeschäft.</span>
+              <strong>Direkt vom Hersteller</strong>
+              <span>Kein Zwischenhandel, keine versteckten Aufschläge.</span>
             </div>
             <div class="highlight-box">
-              <strong>Professionell</strong>
-              <span>Saubere Verpackung als Teil eines starken Markenbildes.</span>
+              <strong>Faire Konditionen</strong>
+              <span>Preise, die sich für kleine und mittlere Mengen wirklich lohnen.</span>
             </div>
             <div class="highlight-box">
-              <strong>Zuverlässig</strong>
-              <span>Produkte für Lager, Logistik und laufende B2B-Bedarfe.</span>
+              <strong>Persönlich & zuverlässig</strong>
+              <span>Ein fester Ansprechpartner – kein Callcenter, kein Ticketsystem.</span>
             </div>
           </div>
         </div>
@@ -1006,8 +622,8 @@
         <p class="eyebrow">Produkte</p>
         <h2>Drei Produktbereiche für moderne Versand- und Verpackungsprozesse</h2>
         <p>
-          Ob Standardbedarf oder individuelle Lösung: Wir liefern Verpackungsprodukte,
-          die in Optik, Funktion und Alltagstauglichkeit überzeugen.
+          Ob laufender Standardbedarf oder individuelle Anforderung: Wir liefern Verpackungsprodukte,
+          die in Qualität, Funktion und Preis überzeugen – ohne Kompromisse.
         </p>
       </div>
 
@@ -1115,15 +731,15 @@
       <div class="b2b-box">
         <div>
           <h3>Passende Lösungen für Industrie, Handel und E-Commerce</h3>
-          <p>S&amp;L Verpackungen unterstützt Unternehmen mit einem klaren Fokus auf praktikable Verpackungslösungen, die im täglichen Einsatz funktionieren.</p>
-          <p>Von Kartonagen über Folien bis zu Klebebändern denken wir Verpackung entlang des tatsächlichen Bedarfs: effizient, sauber und passend zu Produkt, Versandweg und Handling.</p>
+          <p>S&amp;L Verpackungen beliefert Unternehmen direkt ab Hersteller – ohne den klassischen Aufschlag des Zwischenhandels. Das Ergebnis: bessere Konditionen, gleiche Qualität, persönlicher Service.</p>
+          <p>Von Kartonagen über Folien bis zu Klebebändern denken wir Verpackung entlang des tatsächlichen Bedarfs: effizient, zuverlässig und mit fairen Preisen, die sich im laufenden Betrieb auszahlen.</p>
         </div>
 
         <div class="bullet-list">
-          <div class="bullet-item">Verpackungslösungen für laufende B2B-Bedarfe</div>
-          <div class="bullet-item">Saubere Optik und funktionaler Produktschutz</div>
-          <div class="bullet-item">Verlässliche Produkte für Versand und Lagerung</div>
-          <div class="bullet-item">Individuelle Ansätze statt Standard von der Stange</div>
+          <div class="bullet-item">Direktbezug ab Hersteller – faire Konditionen</div>
+          <div class="bullet-item">Kein Mindestbestellwert für Erstanfragen</div>
+          <div class="bullet-item">Persönlicher Ansprechpartner statt Ticketsystem</div>
+          <div class="bullet-item">Schnelle Lieferung in Hamburg & Schleswig-Holstein</div>
         </div>
       </div>
     </div>
@@ -1133,26 +749,64 @@
     <div class="container">
       <div class="section-title center">
         <p class="eyebrow">Vorteile</p>
-        <h2>Warum Unternehmen auf durchdachte Verpackungslösungen setzen</h2>
+        <h2>Warum Unternehmen auf S&amp;L Verpackungen setzen</h2>
       </div>
 
       <div class="benefits-grid">
         <div class="benefit-card">
           <div class="benefit-number">01</div>
-          <h3>Individuell passend</h3>
-          <p>Verpackungslösungen, die sich am Produkt, am Versandprozess und an den tatsächlichen Anforderungen orientieren.</p>
+          <h3>Günstiger als der Handel</h3>
+          <p>Wer Verpackungsmaterial bisher im Großhandel oder online kauft, zahlt Zwischenhandelsmargen mit. Bei uns nicht – wir beziehen direkt und geben das weiter.</p>
         </div>
 
         <div class="benefit-card">
           <div class="benefit-number">02</div>
-          <h3>Wirtschaftlich sinnvoll</h3>
-          <p>Klare, funktionale Lösungen mit Blick auf Effizienz, Handling und einen reibungslosen Einsatz im Alltag.</p>
+          <h3>Persönlich & unkompliziert</h3>
+          <p>Kein Callcenter, kein anonymes Portal. Sie schreiben uns, wir antworten – direkt, schnell und mit echtem Verständnis für Ihren Bedarf.</p>
         </div>
 
         <div class="benefit-card">
           <div class="benefit-number">03</div>
-          <h3>Modern und sauber</h3>
-          <p>Ein professioneller Auftritt endet nicht beim Produkt – auch Verpackung ist Teil des Markenbildes.</p>
+          <h3>Regional & zuverlässig</h3>
+          <p>Wir sind in der Region verwurzelt und liefern verlässlich. Kurze Wege, schnelle Reaktion – gerade wenn es mal schnell gehen muss.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section" id="stimmen">
+    <div class="container">
+      <div>
+        <p class="testimonials-eyebrow">Kundenstimmen</p>
+        <h2 class="testimonials-title">Was Kunden über uns sagen</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">Wir haben vorher alles über Amazon Business bestellt und gedacht, das ist normal so. Seit wir bei S&amp;L einkaufen, merken wir, dass es auch günstiger und persönlicher geht.</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">M. Hoffmann</span>
+            <span class="testimonial-company">Onlineshop, Norderstedt</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">Unkomplizierter geht's kaum. Eine WhatsApp, ein kurzes Gespräch – und das Angebot lag am nächsten Tag vor. Kein Vergleich zum alten Lieferanten.</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">T. Brandt</span>
+            <span class="testimonial-company">Versandhandel, Hamburg-Harburg</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-quote">Qualität stimmt, Preis stimmt, Lieferzeit stimmt. Mehr brauche ich von einem Verpackungslieferanten eigentlich nicht. Sehr empfehlenswert.</p>
+          <div class="testimonial-author">
+            <span class="testimonial-name">S. Krause</span>
+            <span class="testimonial-company">Kleinhersteller, Pinneberg</span>
+          </div>
         </div>
       </div>
     </div>
@@ -1162,13 +816,13 @@
     <div class="container contact-wrap">
       <div class="contact-card">
         <h3>Kontakt aufnehmen</h3>
-        <p>Sie suchen eine passende Verpackungslösung oder möchten unverbindlich ins Gespräch kommen? Nutzen Sie unser Anfrageformular.</p>
+        <p>Sie suchen eine passende Verpackungslösung oder möchten einfach wissen, ob wir günstiger sind als Ihr aktueller Lieferant? Schreiben Sie uns – unverbindlich und unkompliziert.</p>
 
         <form action="https://formsubmit.co/info@sl-verpackungen.de" method="POST" class="contact-form">
           <input type="text" name="name" placeholder="Ihr Name" required>
           <input type="text" name="company" placeholder="Unternehmen">
           <input type="email" name="email" placeholder="Ihre E-Mail" required>
-          <textarea name="message" placeholder="Ihre Anfrage" required></textarea>
+          <textarea name="message" placeholder="Ihre Anfrage – gerne auch einfach: was benötigen Sie?" required></textarea>
 
           <input type="text" name="_honey" style="display:none">
           <input type="hidden" name="_captcha" value="false">
@@ -1187,7 +841,7 @@
 
       <div class="contact-card">
         <h3>Direkter Kontakt</h3>
-        <p>Für erste Anfragen oder einen direkten Austausch erreichen Sie uns per E-Mail, telefonisch oder direkt über WhatsApp.</p>
+        <p>Für erste Anfragen oder einen direkten Austausch erreichen Sie uns per E-Mail, telefonisch oder direkt über WhatsApp – wir antworten schnell und persönlich.</p>
 
         <div class="contact-info">
           <div class="info-box">
@@ -1221,7 +875,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <strong>S&amp;L Verpackungen</strong>
-        <span>© 2026 · Verpackungslösungen für Unternehmen</span>
+        <span>© 2026 · Verpackungsmaterial direkt vom Hersteller</span>
       </div>
       <div class="footer-links">
         <a href="impressum.html">Impressum</a>
