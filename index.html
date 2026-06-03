@@ -443,14 +443,15 @@
     }
     .whatsapp-button:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 24px 44px rgba(37,211,102,0.38);}
     .whatsapp-button svg{width:28px;height:28px;fill:#fff;}
-
+  
+    section[id], div[id]{scroll-margin-top:110px;}
     @keyframes waPulse{
       0%{transform:scale(0.92);opacity:0.8;}
       70%{transform:scale(1.18);opacity:0;}
       100%{transform:scale(1.18);opacity:0;}
     }
 
-    footer{background:var(--dark);color:#fff;margin-top:0;}
+    footer{background:var(--dark);color:#fff;margin-top:0;position:relative;z-index:1300;}
     .footer-inner{
       min-height:110px;display:flex;align-items:center;
       justify-content:space-between;gap:22px;flex-wrap:wrap;padding:28px 0;
